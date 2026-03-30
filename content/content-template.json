@@ -1,0 +1,469 @@
+{
+  "unit": {
+    "id": "unit_template_001",
+    "title": "単元名（例：三単現のs）",
+    "grade": 1,
+    "category": "grammar",
+    "difficulty": "beginner",
+    "totalQuestions": 25,
+    "estimatedMinutes": 45,
+    "goal": "この単元で学べることを1文で記述",
+    "description": "この単元がなぜ重要か、テストでよく出るなど、動機付けとなる説明文（2～3文）"
+  },
+  "explanation": {
+    "sections": [
+      {
+        "type": "introduction",
+        "title": "学習ゴール",
+        "content": "この単元で達成すべき目標を簡潔に説明"
+      },
+      {
+        "type": "rule",
+        "title": "基本ルール",
+        "content": "文法の基本的なルールを説明",
+        "examples": [
+          {
+            "positive": "He plays soccer.",
+            "translation": "彼はサッカーをします"
+          },
+          {
+            "positive": "She likes pizza.",
+            "translation": "彼女はピザが好きです"
+          }
+        ]
+      },
+      {
+        "type": "rule_detail",
+        "title": "ルール詳細：三人称単数形とは",
+        "content": "「三人称単数形」という用語の詳しい説明",
+        "key_points": [
+          "He（男性）",
+          "She（女性）",
+          "It（もの・動物）",
+          "単数の固有名詞や普通名詞"
+        ]
+      },
+      {
+        "type": "usage",
+        "title": "用途別：肯定文・否定文・疑問文",
+        "examples": [
+          {
+            "form": "肯定文",
+            "pattern": "Subject + Verb-s + Object",
+            "example": "He plays soccer.",
+            "translation": "彼はサッカーをします"
+          },
+          {
+            "form": "否定文",
+            "pattern": "Subject + doesn't + Verb(原形) + Object",
+            "example": "He doesn't play soccer.",
+            "translation": "彼はサッカーをしません",
+            "note": "doesn't の後は動詞の原形（s をつけない）"
+          },
+          {
+            "form": "疑問文",
+            "pattern": "Does + Subject + Verb(原形) + Object?",
+            "example": "Does he play soccer?",
+            "translation": "彼はサッカーをしますか？",
+            "note": "文の最初に Does を持ってくる"
+          }
+        ]
+      },
+      {
+        "type": "common_mistake",
+        "title": "よくある間違い",
+        "mistakes": [
+          {
+            "incorrect": "I plays soccer.",
+            "correct": "I play soccer.",
+            "explanation": "I は三人称単数ではないので、s をつけません"
+          },
+          {
+            "incorrect": "He doesn't plays soccer.",
+            "correct": "He doesn't play soccer.",
+            "explanation": "doesn't の後は動詞の原形です。s をつけてはいけません"
+          },
+          {
+            "incorrect": "Do he like pizza?",
+            "correct": "Does he like pizza?",
+            "explanation": "He は三人称単数なので、Do ではなく Does を使います"
+          }
+        ]
+      },
+      {
+        "type": "comparison",
+        "title": "Be動詞との違い",
+        "content": "Be動詞（is/are）と一般動詞の違いを明確に説明",
+        "examples": [
+          {
+            "beVerb": "He is happy.",
+            "generalVerb": "He plays soccer.",
+            "explanation": "Be動詞では is に含まれています。一般動詞では s をつけます"
+          }
+        ]
+      },
+      {
+        "type": "related_grammar",
+        "title": "関連文法：過去形での変化",
+        "content": "過去形では s がつかないことを説明",
+        "examples": [
+          {
+            "present": "He plays soccer.",
+            "past": "He played soccer.",
+            "translation": "彼はサッカーをしました"
+          }
+        ]
+      }
+    ]
+  },
+  "quickCheck": {
+    "title": "クイックチェック",
+    "description": "解説を読んだ直後に、理解度を確認する簡単な問題",
+    "questions": [
+      {
+        "id": "qc_001",
+        "type": "choice",
+        "question": "「彼はテニスをします」を英語で言うと？",
+        "options": [
+          {
+            "text": "He play tennis.",
+            "correct": false,
+            "feedback": "He は三人称単数なので、s をつけます"
+          },
+          {
+            "text": "He plays tennis.",
+            "correct": true,
+            "feedback": "その通り！He は三人称単数なので s がつきます"
+          },
+          {
+            "text": "He is plays tennis.",
+            "correct": false,
+            "feedback": "Be動詞と一般動詞は混ぜません"
+          }
+        ]
+      }
+    ]
+  },
+  "exercises": {
+    "basic": {
+      "title": "基礎を固める",
+      "description": "簡単な問題で、基本的なルール理解を確認します",
+      "estimatedMinutes": 15,
+      "questions": [
+        {
+          "id": "ex_basic_001",
+          "type": "choice",
+          "question": "次の空欄に当てはまる動詞を選びなさい。\nShe _______ pizza.",
+          "options": [
+            {
+              "text": "like",
+              "correct": false,
+              "feedback": "She は三人称単数なので、s をつけます"
+            },
+            {
+              "text": "likes",
+              "correct": true,
+              "feedback": "正解！She は三人称単数なので s がつきます"
+            },
+            {
+              "text": "is like",
+              "correct": false,
+              "feedback": "Be動詞は使いません"
+            }
+          ]
+        },
+        {
+          "id": "ex_basic_002",
+          "type": "sort",
+          "question": "単語を並べて文を完成させなさい。\n（日本語訳：彼は毎日勉強します）",
+          "words": ["studies", "every", "day", "He"],
+          "correctOrder": ["He", "studies", "every", "day"],
+          "feedback": "He studies every day. 正解です！"
+        },
+        {
+          "id": "ex_basic_003",
+          "type": "choice",
+          "question": "否定文を正しく選びなさい。",
+          "options": [
+            {
+              "text": "He doesn't plays soccer.",
+              "correct": false,
+              "feedback": "doesn't の後は動詞の原形（s なし）です"
+            },
+            {
+              "text": "He doesn't play soccer.",
+              "correct": true,
+              "feedback": "正解！doesn't play で正しい形です"
+            },
+            {
+              "text": "He don't play soccer.",
+              "correct": false,
+              "feedback": "He には doesn't を使います"
+            }
+          ]
+        }
+      ]
+    },
+    "advanced": {
+      "title": "応用に挑戦",
+      "description": "少し難しい問題で、より深い理解を目指します",
+      "estimatedMinutes": 20,
+      "questions": [
+        {
+          "id": "ex_adv_001",
+          "type": "transform",
+          "question": "次の文を否定文に変えなさい。\nHe plays tennis.",
+          "answer": "He doesn't play tennis.",
+          "acceptableAnswers": [
+            "He doesn't play tennis.",
+            "He does not play tennis."
+          ],
+          "feedback": "正解！doesn't の後は原形 play です"
+        },
+        {
+          "id": "ex_adv_002",
+          "type": "transform",
+          "question": "次の文を疑問文に変えなさい。\nShe likes ice cream.",
+          "answer": "Does she like ice cream?",
+          "acceptableAnswers": [
+            "Does she like ice cream?",
+            "Does she like ice cream"
+          ],
+          "feedback": "正解！Does を文の最初に持ってきます"
+        },
+        {
+          "id": "ex_adv_003",
+          "type": "writing",
+          "question": "「私の友達はコンピュータが好きです」を英語で書きなさい。",
+          "possibleAnswers": [
+            "My friend likes computers.",
+            "My friend like computer.",
+            "My friends like computers."
+          ],
+          "feedback": "My friend likes computers. が標準的な答えです"
+        }
+      ]
+    }
+  },
+  "miniTest": {
+    "title": "小テスト【三単現のs】",
+    "description": "この単元をマスターできたか、テスト形式で確認します",
+    "estimatedMinutes": 15,
+    "totalQuestions": 10,
+    "timeLimit": 900,
+    "questions": [
+      {
+        "id": "test_001",
+        "type": "choice",
+        "question": "He _______ basketball every day.",
+        "options": [
+          {
+            "text": "play",
+            "correct": false
+          },
+          {
+            "text": "plays",
+            "correct": true
+          },
+          {
+            "text": "is playing",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "test_002",
+        "type": "choice",
+        "question": "Does your sister _______ English?",
+        "options": [
+          {
+            "text": "studies",
+            "correct": false
+          },
+          {
+            "text": "study",
+            "correct": true
+          },
+          {
+            "text": "is study",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "test_003",
+        "type": "sort",
+        "question": "文を並び替えなさい。",
+        "words": ["doesn't", "Tom", "like", "vegetables"],
+        "correctOrder": ["Tom", "doesn't", "like", "vegetables"]
+      },
+      {
+        "id": "test_004",
+        "type": "transform",
+        "question": "疑問文に変えなさい。\nMy mother cooks dinner every day.",
+        "answer": "Does your mother cook dinner every day?",
+        "acceptableAnswers": [
+          "Does your mother cook dinner every day?",
+          "Does she cook dinner every day?"
+        ]
+      },
+      {
+        "id": "test_005",
+        "type": "choice",
+        "question": "正しい文を選びなさい。",
+        "options": [
+          {
+            "text": "She don't like cats.",
+            "correct": false
+          },
+          {
+            "text": "She doesn't likes cats.",
+            "correct": false
+          },
+          {
+            "text": "She doesn't like cats.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "id": "test_006",
+        "type": "choice",
+        "question": "I _______ computer games on weekends.",
+        "options": [
+          {
+            "text": "plays",
+            "correct": false
+          },
+          {
+            "text": "play",
+            "correct": true
+          },
+          {
+            "text": "is play",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "test_007",
+        "type": "transform",
+        "question": "否定文に変えなさい。\nHe watches TV every evening.",
+        "answer": "He doesn't watch TV every evening.",
+        "acceptableAnswers": [
+          "He doesn't watch TV every evening.",
+          "He does not watch TV every evening."
+        ]
+      },
+      {
+        "id": "test_008",
+        "type": "choice",
+        "question": "「彼女は毎日学校へ行きます」\nWhich is correct?",
+        "options": [
+          {
+            "text": "She go to school every day.",
+            "correct": false
+          },
+          {
+            "text": "She goes to school every day.",
+            "correct": true
+          },
+          {
+            "text": "She going to school every day.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "test_009",
+        "type": "writing",
+        "question": "「彼はテニスをしません」を英語で書きなさい。",
+        "possibleAnswers": [
+          "He doesn't play tennis.",
+          "He does not play tennis."
+        ]
+      },
+      {
+        "id": "test_010",
+        "type": "choice",
+        "question": "Does it _______ in June in Japan?",
+        "options": [
+          {
+            "text": "rains",
+            "correct": false
+          },
+          {
+            "text": "rain",
+            "correct": true
+          },
+          {
+            "text": "is rain",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  },
+  "teacherNote": {
+    "title": "先生用メモ",
+    "pedagogicalApproach": "このユニットは段階的学習法（scaffolding）を採用しています。まず『be動詞と一般動詞の区別』を理解させ、次に『三人称単数形の概念』を導入します",
+    "commonMisunderstandings": [
+      "I/You/We/They でも s をつけると勘違い",
+      "doesn't play vs doesn't plays の誤用",
+      "Be動詞と一般動詞の混淆"
+    ],
+    "assessment": "小テストは10問で3段階の習熟度を判定します。正答率80%以上で次単元へ進行推奨。60～79%は復習を推奨。60%未満は基礎問題の再学習を推奨",
+    "extension": "高度な学習者向けに、他の動詞（can, will, must など）との違いをオプション資料で提供可能"
+  },
+  "faq": [
+    {
+      "question": "三単現のsが難しい理由は？",
+      "answer": "多くの動詞では変化が『s をつけるだけ』ですが、be動詞（is/are）や過去形（played）など、他の文法との違いを同時に学ぶ必要があるため、複雑に見えます。1つずつ丁寧に学びましょう"
+    },
+    {
+      "question": "なぜ don't ではなく doesn't なのですか？",
+      "answer": "He は三人称単数だから。He には『s』が必要なので、助動詞 do にも『es』がついて does になります。これは主語によって変わるルールです"
+    },
+    {
+      "question": "テストでよく出る問題形式は？",
+      "answer": "空欄補充（『plays』『play』どちらか）と否定文・疑問文への変形がよく出ます。このアプリで十分対策できます"
+    }
+  ],
+  "questionPrompt": {
+    "templates": [
+      {
+        "id": "template_1",
+        "label": "この部分がわかりません",
+        "placeholder": "具体的には、どの部分がわかりませんか？（例：doesn't の後が原形な理由がわかりません）"
+      },
+      {
+        "id": "template_2",
+        "label": "例文の使い分けがわかりません",
+        "placeholder": "どの例文の違いがわかりませんか？（例：doesn't play と don't play の使い分け）"
+      },
+      {
+        "id": "template_3",
+        "label": "発音・スペルについて",
+        "placeholder": "発音やスペルについての質問を書いてください"
+      },
+      {
+        "id": "template_4",
+        "label": "テストで出そうなポイント",
+        "placeholder": "テストに出そうだと思う内容について質問してください"
+      },
+      {
+        "id": "template_5",
+        "label": "その他",
+        "placeholder": "その他の質問を自由に書いてください"
+      }
+    ]
+  },
+  "metadata": {
+    "createdAt": "2024-01-01",
+    "updatedAt": "2024-03-29",
+    "version": "1.0",
+    "author": "中学校英語サポート＋ コンテンツチーム",
+    "license": "All rights reserved",
+    "status": "published"
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "unit": {
+    "id": "s01",
+    "title": "三単現のs",
+    "grade": 1,
+    "difficulty": 2,
+    "totalQuestions": 29,
+    "estimatedMinutes": 20,
+    "goal": "He/She/Itなど3人称単数が主語のとき、動詞にsやesをつけられるようになる",
+    "description": "三人称単数現在形のsについて学ぼう"
+  },
+  "explanation": {
+    "sections": [
+      {
+        "id": "exp01",
+        "title": "三単現のsとは？",
+        "content": "英語の動詞は、主語によって形が変わります。特に「彼」「彼女」「それ」など3人称単数（一つの人や物）が主語のときは、動詞にsやesをつけます。これを「三単現のs」と呼びます。",
+        "keyPoints": [
+          "3人称単数＝He/She/It や人名・物の名前",
+          "現在形の場合、3人称単数の動詞にsやesをつける",
+          "I/You/We/Theyのときはsをつけない",
+          "日本語では「～する」「～します」で区別がないが、英語では形が変わる"
+        ],
+        "examples": [
+          {"en": "He plays soccer.", "ja": "彼はサッカーをします。"},
+          {"en": "She studies English.", "ja": "彼女は英語を勉強します。"},
+          {"en": "It has a tail.", "ja": "それは尾を持っています。"},
+          {"en": "Tom goes to school.", "ja": "トムは学校に行きます。"},
+          {"en": "My mother watches TV.", "ja": "私の母はテレビを見ます。"}
+        ]
+      },
+      {
+        "id": "exp02",
+        "title": "sのつけ方ルール",
+        "content": "動詞の語尾によって、sやesのつけ方が異なります。以下の4つのパターンを覚えましょう。",
+        "rules": [
+          {
+            "pattern": "ほとんどの動詞",
+            "rule": "+ s",
+            "examples": ["play→plays", "like→likes", "listen→listens", "live→lives"]
+          },
+          {
+            "pattern": "s, sh, ch, x, z, oで終わる動詞",
+            "rule": "+ es",
+            "examples": ["wash→washes", "go→goes", "catch→catches", "fix→fixes", "buzz→buzzes"]
+          },
+          {
+            "pattern": "子音字+yで終わる動詞",
+            "rule": "y→ies",
+            "examples": ["study→studies", "cry→cries", "try→tries", "carry→carries"]
+          },
+          {
+            "pattern": "have",
+            "rule": "→ has",
+            "examples": ["have→has"]
+          }
+        ]
+      },
+      {
+        "id": "exp03",
+        "title": "よくあるミス",
+        "mistakes": [
+          {
+            "wrong": "She play tennis.",
+            "correct": "She plays tennis.",
+            "explanation": "Sheは三単現なのでplaysにします。主語が3人称単数のときは動詞にsをつけることを忘れずに。"
+          },
+          {
+            "wrong": "He studys math.",
+            "correct": "He studies math.",
+            "explanation": "子音字+yで終わる動詞はy→iesです。studyはstudiesになります。studysではありません。"
+          },
+          {
+            "wrong": "She have a cat.",
+            "correct": "She has a cat.",
+            "explanation": "haveはhasになります。これはルール以外の例外なので必ず覚えましょう。"
+          }
+        ]
+      }
+    ]
+  },
+  "quickCheck": {
+    "id": "qc01",
+    "title": "確認チェック",
+    "description": "学習前に実力をはかってみよう",
+    "questions": [
+      {
+        "id": "qc01-q01",
+        "type": "choice",
+        "question": "「彼女は英語を勉強します」を英語にすると？",
+        "choices": [
+          "She study English.",
+          "She studies English.",
+          "She studys English.",
+          "She is study English."
+        ],
+        "answer": 1,
+        "explanation": "study→studiesです。子音字+yで終わる動詞はy→iesです。She studies English.が正解。"
+      },
+      {
+        "id": "qc01-q02",
+        "type": "choice",
+        "question": "Heに続く動詞の正しい形は？ (wash)",
+        "choices": [
+          "wash",
+          "washs",
+          "washes",
+          "washies"
+        ],
+        "answer": 2,
+        "explanation": "shで終わる動詞はesをつけます。wash→washesです。He washes his hands.のように使います。"
+      }
+    ]
+  },
+  "exercises": {
+    "basic": {
+      "id": "ex_basic",
+      "title": "基礎ワーク",
+      "description": "動詞の変化をしっかりマスターしよう",
+      "questions": [
+        {
+          "id": "ex_basic_01",
+          "type": "transform",
+          "question": "次の動詞を三単現のsをつけた形に変えなさい。\nplay",
+          "answer": "plays",
+          "hint": "ほとんどの動詞はそのままsをつけます。",
+          "explanation": "play → plays　（そのままs）"
+        },
+        {
+          "id": "ex_basic_02",
+          "type": "transform",
+          "question": "次の動詞を三単現のsをつけた形に変えなさい。\nstudy",
+          "answer": "studies",
+          "hint": "子音字+yで終わる動詞は、y→iesです。",
+          "explanation": "study → studies　（y → ies）"
+        },
+        {
+          "id": "ex_basic_03",
+          "type": "transform",
+          "question": "次の動詞を三単現のsをつけた形に変えなさい。\nwatch",
+          "answer": "watches",
+          "hint": "chで終わる動詞はesをつけます。",
+          "explanation": "watch → watches　（ch → ches）"
+        },
+        {
+          "id": "ex_basic_04",
+          "type": "transform",
+          "question": "次の動詞を三単現のsをつけた形に変えなさい。\nhave",
+          "answer": "has",
+          "hint": "haveはhas。これは例外です。",
+          "explanation": "have → has　（例外！必ず覚える）"
+        },
+        {
+          "id": "ex_basic_05",
+          "type": "transform",
+          "question": "次の動詞を三単現のsをつけた形に変えなさい。\ngo",
+          "answer": "goes",
+          "hint": "oで終わる動詞はesをつけます。",
+          "explanation": "go → goes　（o → oes）"
+        },
+        {
+          "id": "ex_basic_06",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nMy sister ( ) the piano every day.",
+          "choices": [
+            "play",
+            "plays",
+            "playing",
+            "played"
+          ],
+          "answer": 1,
+          "hint": "my sisterは三単現です。",
+          "explanation": "My sisterは3人称単数なので、play → playsです。My sister plays the piano every day."
+        },
+        {
+          "id": "ex_basic_07",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nTom ( ) his homework after school.",
+          "choices": [
+            "do",
+            "does",
+            "doing",
+            "is do"
+          ],
+          "answer": 1,
+          "hint": "doは特殊です。doesになります。",
+          "explanation": "Tomは3人称単数なので、do → doesです。Tom does his homework after school."
+        },
+        {
+          "id": "ex_basic_08",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。\n[ cats / She / two / has ]",
+          "words": ["cats", "She", "two", "has"],
+          "answer": "She has two cats.",
+          "hint": "Sheが主語です。haveのhasに注意。",
+          "explanation": "She has two cats.　（haveはhasになる）"
+        },
+        {
+          "id": "ex_basic_09",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。\n[ every / He / English / studies / day ]",
+          "words": ["every", "He", "English", "studies", "day"],
+          "answer": "He studies English every day.",
+          "hint": "studyはstudiesになります。",
+          "explanation": "He studies English every day.　（study → studies）"
+        },
+        {
+          "id": "ex_basic_10",
+          "type": "mistake",
+          "question": "次の英文の間違いを見つけて正しく直しなさい。\nShe play the guitar.",
+          "wrongWord": "play",
+          "answer": "plays",
+          "explanation": "Sheは三単現なので、play → playsが正しい。She plays the guitar."
+        }
+      ]
+    },
+    "advanced": {
+      "id": "ex_adv",
+      "title": "応用ワーク",
+      "description": "英作文と長文で実力をつけよう",
+      "questions": [
+        {
+          "id": "ex_adv_01",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「ケンは毎朝、朝食を食べます。」",
+          "answer": "Ken eats breakfast every morning.",
+          "hint": "eatはeatsになります。",
+          "explanation": "Ken eats breakfast every morning.\neat → eats（ほとんどの動詞＋s）"
+        },
+        {
+          "id": "ex_adv_02",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「彼女は日曜日にテニスをします。」",
+          "answer": "She plays tennis on Sundays.",
+          "hint": "playはplaysになります。",
+          "explanation": "She plays tennis on Sundays.\nplay → plays"
+        },
+        {
+          "id": "ex_adv_03",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「田中先生は数学を教えます。」",
+          "answer": "Mr. Tanaka teaches math.",
+          "hint": "teachはchで終わります。",
+          "explanation": "Mr. Tanaka teaches math.\nteach → teaches（ch → ches）"
+        },
+        {
+          "id": "ex_adv_04",
+          "type": "mistake",
+          "question": "次の英文の間違いを2つ探して、正しく直しなさい。\nShe go to school by bike. He have a dog.",
+          "answers": [
+            {"wrong": "go", "correct": "goes"},
+            {"wrong": "have", "correct": "has"}
+          ],
+          "explanation": "go → goes（oで終わるのでes）, have → has（例外）"
+        },
+        {
+          "id": "ex_adv_05",
+          "type": "rewrite",
+          "question": "次の文のI/weをHe/Sheに変えて書き直しなさい。\nI like music.",
+          "answer": "He likes music. / She likes music.",
+          "hint": "主語が変わると動詞も変わります。",
+          "explanation": "I → He/She にすると、like → likesにしなければなりません。"
+        }
+      ]
+    }
+  },
+  "miniTest": {
+    "id": "test01",
+    "title": "定期テスト風 小テスト",
+    "description": "学習の定着を確認しましょう",
+    "timeLimit": 600,
+    "passingScore": 70,
+    "totalPoints": 60,
+    "questions": [
+      {
+        "id": "test_01",
+        "type": "transform",
+        "points": 4,
+        "question": "次の動詞を( )内の主語に合う形に変えなさい。\nlive (She)",
+        "answer": "lives",
+        "explanation": "live → lives（そのままs）"
+      },
+      {
+        "id": "test_02",
+        "type": "transform",
+        "points": 4,
+        "question": "次の動詞を( )内の主語に合う形に変えなさい。\nwash (He)",
+        "answer": "washes",
+        "explanation": "wash → washes（shで終わるのでes）"
+      },
+      {
+        "id": "test_03",
+        "type": "transform",
+        "points": 4,
+        "question": "次の動詞を( )内の主語に合う形に変えなさい。\ncry (She)",
+        "answer": "cries",
+        "explanation": "cry → cries（子音字+y → ies）"
+      },
+      {
+        "id": "test_04",
+        "type": "transform",
+        "points": 4,
+        "question": "次の動詞を( )内の主語に合う形に変えなさい。\nhave (Tom)",
+        "answer": "has",
+        "explanation": "have → has（例外！）"
+      },
+      {
+        "id": "test_05",
+        "type": "choice",
+        "points": 4,
+        "question": "( )に入る正しい語を選びなさい。\nYuki ( ) English very much.",
+        "choices": [
+          "like",
+          "likes",
+          "liked",
+          "is like"
+        ],
+        "answer": 1,
+        "explanation": "Yukiは3人称単数なので、like → likesです。"
+      },
+      {
+        "id": "test_06",
+        "type": "choice",
+        "points": 4,
+        "question": "( )に入る正しい語を選びなさい。\nMy brother ( ) soccer after school.",
+        "choices": [
+          "play",
+          "plays",
+          "playing",
+          "is plays"
+        ],
+        "answer": 1,
+        "explanation": "My brotherは三単現。play → playsです。"
+      },
+      {
+        "id": "test_07",
+        "type": "sort",
+        "points": 5,
+        "question": "並び替えて正しい文を作りなさい。\n[ the / teaches / Ms. Sato / piano ]",
+        "words": ["the", "teaches", "Ms. Sato", "piano"],
+        "answer": "Ms. Sato teaches the piano.",
+        "explanation": "Ms. Sato teaches the piano.（teach→teachesはchで終わる）"
+      },
+      {
+        "id": "test_08",
+        "type": "sort",
+        "points": 5,
+        "question": "並び替えて正しい文を作りなさい。\n[ a / has / Ken / sister ]",
+        "words": ["a", "has", "Ken", "sister"],
+        "answer": "Ken has a sister.",
+        "explanation": "Ken has a sister.（have→has）"
+      },
+      {
+        "id": "test_09",
+        "type": "mistake",
+        "points": 5,
+        "question": "次の文の間違いを1つ見つけて正しく直しなさい。\nHe studys math every night.",
+        "wrongWord": "studys",
+        "answer": "studies",
+        "explanation": "study → studies（子音字y → ies）。×studys ○studies"
+      },
+      {
+        "id": "test_10",
+        "type": "writing",
+        "points": 6,
+        "question": "次の日本文を英語にしなさい。\n「私の父は車を持っています。」",
+        "answer": "My father has a car.",
+        "hint": "haveはhasになります。",
+        "explanation": "My father has a car.（have→has）"
+      },
+      {
+        "id": "test_11",
+        "type": "writing",
+        "points": 6,
+        "question": "次の日本文を英語にしなさい。\n「エミは放課後に音楽を聴きます。」",
+        "answer": "Emi listens to music after school.",
+        "hint": "listenはlistensになります。",
+        "explanation": "Emi listens to music after school.（listen→listens）"
+      },
+      {
+        "id": "test_12",
+        "type": "writing",
+        "points": 9,
+        "question": "次の日本文を英語にしなさい（配点大）。\n「私の姉は毎朝、日本語を勉強します。」",
+        "answer": "My sister studies Japanese every morning.",
+        "hint": "studyはstudiesになります。",
+        "explanation": "My sister studies Japanese every morning.（study→studies）"
+      }
+    ]
+  },
+  "teacherNote": {
+    "title": "教員向けガイド",
+    "content": "【教員視点の解説】\n三単現のsは、中学英語でつまずきやすいポイントの第1位です。定期テストでは、動詞の変化（s/es/ies/has）の問題が5〜15点分出題される学校が多いです。\n\n【指導のポイント】\n1. まず「なぜsがつくか」より「いつsがつくか」を先に教える（主語の人称と数）\n2. ルール4パターンを表にして覚えさせる\n3. haveはhasという例外を最初に強調する\n4. 「私はplay、彼はplays」と音で区別させる練習が効果的\n5. 子音字+yをy→iesに変えるときに、「yの前が子音」という条件を強調する\n\n【定期テスト頻出ポイント】\n- study → studies（×studys は最多ミス）\n- have → has（例外として最重要）\n- go → goes（oで終わるes）\n- 並び替えで動詞変化忘れが多い\n- 写真や文脈から3人称単数を判断できているか確認が必要\n\n【導入の流れ】\n1. 導入期：I play, You play, He plays, We play, They playを表で示す\n2. 説明期：ルール4パターンを順番に説明\n3. 練習期：基礎ワークで各パターンを分けて練習\n4. 定着期：応用ワークで複合的な問題を解く\n5. 評価期：小テストで定着を確認\n\n【授業時間の目安】\n- 導入・説明：10分\n- 基礎ワーク：15分（個人練習）\n- 応用ワーク：10分（個人練習）\n- 小テスト：15分（評価）\n- 合計：50分（1時間授業に対応）"
+  },
+  "faq": [
+    {
+      "q": "sとesはどう使い分けるの？",
+      "a": "動詞の語尾で決まります。s/sh/ch/x/z/oで終わる動詞はes、それ以外はs。また子音字+yはyをiesに変えます。語尾を注意深く見ることが大切です。"
+    },
+    {
+      "q": "Theyにもsがつきますか？",
+      "a": "Theyは複数なので三単現ではありません。Theyのあとの動詞はsをつけません。（They play soccer.）複数形は常にsなしです。"
+    },
+    {
+      "q": "haveはどうしてhasになるの？",
+      "a": "haveはルールに関係なく必ずhasになります。英語の歴史的な理由による例外なので、そのまま覚えてしまいましょう！他の例外はほぼありません。"
+    },
+    {
+      "q": "youも一人だからsがつくの？",
+      "a": "youは1人でも三単現にはなりません。2人称のyouは特別で、常にsなしの動詞を使います。（You play guitar.）1人への敬語であっても同じです。"
+    },
+    {
+      "q": "doとdoesはどう違うの？",
+      "a": "I/You/We/Theyはdo、He/She/Itはdoesです。三単現のsのルールと同じで、主語が3人称単数ならdoesになります。"
+    },
+    {
+      "q": "子音字+yってどういう意味ですか？",
+      "a": "「yの前が子音（あいうえおではない音）」という意味です。例えばstudyはdが子音なのでy→ies。一方、buyは子音ではなく母音uが前にあるので、y→yesではなくそのままbuysになります。"
+    }
+  ],
+  "questionPrompt": "三単現のsでわからないことがあったら、すぐ質問してね！「どの問題で」「どこが」わからないか書くと、より早く答えられます。",
+  "metadata": {
+    "version": "1.0",
+    "createdDate": "2026-03-29",
+    "author": "中学校英語サポート＋開発チーム",
+    "language": "ja",
+    "encoding": "utf-8",
+    "estimatedCompletionTime": 20,
+    "completionTimeUnit": "minutes"
+  }
+}

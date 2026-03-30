@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#3B82F6">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>中学校英語サポート＋</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- ========================
+         ヘッダー（固定・青背景）
+         ======================== -->
+    <header class="app-header" id="app-header">
+      <!-- 戻るボタン（単元詳細・ワーク画面で表示） -->
+      <button class="back-btn hidden" id="back-btn" onclick="goBack()">← 戻る</button>
+      <!-- ロゴ（ホーム・一覧など） -->
+      <div class="header-logo" id="header-logo">
+        📘 中学英語<span class="header-logo-plus">＋</span>
+      </div>
+      <!-- 画面タイトル（詳細系画面） -->
+      <h1 class="header-title hidden" id="header-title"></h1>
+      <!-- 右側アクション領域 -->
+      <div id="header-actions" style="margin-left:auto;"></div>
+    </header>
+
+    <!-- ========================
+         各画面コンテナ（JSがinnerHTMLを注入）
+         ======================== -->
+    <main>
+      <div id="screen-home"             class="screen active"></div>
+      <div id="screen-units"            class="screen"></div>
+      <div id="screen-unit-detail"      class="screen"></div>
+      <div id="screen-work"             class="screen"></div>
+      <div id="screen-question"         class="screen"></div>
+      <div id="screen-question-history" class="screen"></div>
+      <div id="screen-records"          class="screen"></div>
+      <div id="screen-parent"           class="screen"></div>
+      <div id="screen-menu"             class="screen"></div>
+    </main>
+
+    <!-- ========================
+         BottomNavBar（固定）
+         ======================== -->
+    <nav class="bottom-nav" id="bottom-nav">
+      <button class="nav-item active" data-screen="home"    onclick="showScreen('home')">
+        <span class="nav-icon">🏠</span><span>ホーム</span>
+      </button>
+      <button class="nav-item"        data-screen="units"   onclick="showScreen('units')">
+        <span class="nav-icon">📚</span><span>まなぶ</span>
+      </button>
+      <button class="nav-item"        data-screen="records" onclick="showScreen('records')">
+        <span class="nav-icon">📊</span><span>きろく</span>
+      </button>
+      <button class="nav-item"        data-screen="menu"    onclick="showScreen('menu')">
+        <span class="nav-icon">☰</span><span>メニュー</span>
+      </button>
+    </nav>
+
+  </div><!-- /.app-container -->
+
+  <!-- 全教材データ込みのメインスクリプト（file://でも動作） -->
+  <script src="js/app.js"></script>
+</body>
+</html>

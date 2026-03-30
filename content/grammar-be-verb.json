@@ -1,0 +1,543 @@
+{
+  "unit": {
+    "id": "b01",
+    "title": "be動詞（am / is / are）",
+    "grade": 1,
+    "difficulty": 2,
+    "totalQuestions": 37,
+    "estimatedMinutes": 25,
+    "goal": "主語に合わせてam/is/areを使い分け、簡単な肯定文・否定文・疑問文が作れるようになる",
+    "description": "「〜は・・・です」をbe動詞で表現しよう"
+  },
+  "explanation": {
+    "title": "be動詞（am / is / are）とは？",
+    "intro": "「私は中学生です」「彼は背が高い」のように「〜は・・・です」を表すとき、be動詞（am / is / are）を使います。主語によって使う形が変わるので、組み合わせをしっかり覚えましょう。",
+    "rules": [
+      {
+        "pattern": "I（私）",
+        "rule": "am",
+        "examples": [
+          "I am Ken.",
+          "I am a student.",
+          "I am 13 years old."
+        ]
+      },
+      {
+        "pattern": "He / She / It / 単数の名詞",
+        "rule": "is",
+        "examples": [
+          "He is tall.",
+          "She is my teacher.",
+          "It is a cat.",
+          "Ken is kind."
+        ]
+      },
+      {
+        "pattern": "You / We / They / 複数の名詞",
+        "rule": "are",
+        "examples": [
+          "You are kind.",
+          "We are friends.",
+          "They are students.",
+          "Ken and Yuki are classmates."
+        ]
+      }
+    ],
+    "negativeRules": [
+      {
+        "subject": "I",
+        "negative": "am not",
+        "short": "（短縮なし）",
+        "example": "I am not Ken."
+      },
+      {
+        "subject": "He / She / It",
+        "negative": "is not",
+        "short": "isn't",
+        "example": "She isn't tall."
+      },
+      {
+        "subject": "You / We / They",
+        "negative": "are not",
+        "short": "aren't",
+        "example": "They aren't students."
+      }
+    ],
+    "questionRule": "be動詞を主語の前に出す。\nIs he tall? / Are you a student?",
+    "commonMistakes": [
+      {
+        "wrong": "I is a student.",
+        "correct": "I am a student.",
+        "tip": "Iのあとはamだけ！is/areは使わない"
+      },
+      {
+        "wrong": "She are tall.",
+        "correct": "She is tall.",
+        "tip": "She/He/Itのあとはis！"
+      },
+      {
+        "wrong": "They is students.",
+        "correct": "They are students.",
+        "tip": "They/We/Youのあとはare！"
+      }
+    ]
+  },
+  "quickCheck": {
+    "id": "qc_b01",
+    "title": "クイックチェック",
+    "questions": [
+      {
+        "id": "qcb01",
+        "type": "choice",
+        "question": "「私はケンです」を英語にすると？",
+        "choices": [
+          "I am Ken.",
+          "I is Ken.",
+          "I are Ken.",
+          "I be Ken."
+        ],
+        "answer": 0,
+        "explanation": "IのあとはamだけがOKです。I am Ken."
+      },
+      {
+        "id": "qcb02",
+        "type": "choice",
+        "question": "「彼女は背が高い」の正しい英文は？",
+        "choices": [
+          "She am tall.",
+          "She is tall.",
+          "She are tall.",
+          "She be tall."
+        ],
+        "answer": 1,
+        "explanation": "She/He/ItのあとはisだけがOKです。She is tall."
+      }
+    ]
+  },
+  "exercises": {
+    "basic": {
+      "id": "ex_b01_basic",
+      "title": "基礎ワーク",
+      "questions": [
+        {
+          "id": "bb01",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nI ( ) Taro.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 0,
+          "hint": "Iのあとは？",
+          "explanation": "IのあとはamだけOK。I am Taro."
+        },
+        {
+          "id": "bb02",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nShe ( ) my mother.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 1,
+          "hint": "She/He/Itのあとは？",
+          "explanation": "SheのあとはisだけOK。She is my mother."
+        },
+        {
+          "id": "bb03",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nYou ( ) kind.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 2,
+          "hint": "Youのあとはamかisかareか？",
+          "explanation": "YouのあとはareだけOK。You are kind."
+        },
+        {
+          "id": "bb04",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nWe ( ) good friends.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 2,
+          "hint": "Weのあとはamかisかareか？",
+          "explanation": "WeのあとはareだけOK。We are good friends."
+        },
+        {
+          "id": "bb05",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nHe ( ) a tennis player.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 1,
+          "hint": "He/She/ItのあとはisだけOK。",
+          "explanation": "HeのあとはisだけOK。He is a tennis player."
+        },
+        {
+          "id": "bb06",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nThey ( ) students.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 2,
+          "hint": "TheyのあとはareだけOK。",
+          "explanation": "TheyのあとはareだけOK。They are students."
+        },
+        {
+          "id": "bb07",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nIt ( ) a big dog.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 1,
+          "hint": "ItはHe/She/Itと同じグループです。",
+          "explanation": "ItのあとはisだけOK。It is a big dog."
+        },
+        {
+          "id": "bb08",
+          "type": "choice",
+          "question": "（　）に入る正しいbe動詞を選びなさい。\nMs. Sato ( ) our teacher.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 1,
+          "hint": "Ms. Satoは1人（単数）の名前なので？",
+          "explanation": "単数の名詞のあとはisを使います。Ms. Sato is our teacher."
+        },
+        {
+          "id": "bb09",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。",
+          "words": [
+            "is",
+            "She",
+            "a",
+            "teacher"
+          ],
+          "answer": "She is a teacher.",
+          "hint": "主語はShe（三人称単数）です。",
+          "explanation": "She is a teacher.（She→is）"
+        },
+        {
+          "id": "bb10",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。",
+          "words": [
+            "are",
+            "We",
+            "good",
+            "friends"
+          ],
+          "answer": "We are good friends.",
+          "hint": "主語はWe（複数）です。",
+          "explanation": "We are good friends.（We→are）"
+        },
+        {
+          "id": "bb11",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。",
+          "words": [
+            "is",
+            "tall",
+            "Ken"
+          ],
+          "answer": "Ken is tall.",
+          "hint": "KenはHe/Sheと同じグループです。",
+          "explanation": "Ken is tall.（Ken→is）"
+        },
+        {
+          "id": "bb12",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい（否定文）。",
+          "words": [
+            "am",
+            "I",
+            "not",
+            "Yuki"
+          ],
+          "answer": "I am not Yuki.",
+          "hint": "Iの否定はam notです。",
+          "explanation": "I am not Yuki.（amのあとにnotを置く）"
+        },
+        {
+          "id": "bb13",
+          "type": "mistake",
+          "question": "次の英文の間違いを見つけて正しく直しなさい。\nI is Ken.",
+          "wrongWord": "is",
+          "answer": "am",
+          "explanation": "IのあとはamだけOK。I am Ken."
+        },
+        {
+          "id": "bb14",
+          "type": "mistake",
+          "question": "次の英文の間違いを見つけて正しく直しなさい。\nShe are my sister.",
+          "wrongWord": "are",
+          "answer": "is",
+          "explanation": "SheのあとはisだけOK。She is my sister."
+        },
+        {
+          "id": "bb15",
+          "type": "mistake",
+          "question": "次の英文の間違いを見つけて正しく直しなさい。\nThey is students.",
+          "wrongWord": "is",
+          "answer": "are",
+          "explanation": "TheyのあとはareだけOK。They are students."
+        },
+        {
+          "id": "bb16",
+          "type": "mistake",
+          "question": "次の英文の間違いを見つけて正しく直しなさい。\nHe am happy.",
+          "wrongWord": "am",
+          "answer": "is",
+          "explanation": "HeのあとはisだけOK。He is happy."
+        },
+        {
+          "id": "bb17",
+          "type": "transform",
+          "question": "次のbe動詞の否定形（短縮なし）を書きなさい。\nam の否定形",
+          "answer": "am not",
+          "hint": "amの直後にnotを置きます。am → am not",
+          "explanation": "am not（短縮形なし。I'm notとは言わない！）"
+        },
+        {
+          "id": "bb18",
+          "type": "transform",
+          "question": "次のbe動詞の短縮した否定形を書きなさい。\nis の否定短縮形",
+          "answer": "isn't",
+          "hint": "is not の短縮形です。",
+          "explanation": "is not → isn't（'t で short にする）"
+        },
+        {
+          "id": "bb19",
+          "type": "transform",
+          "question": "次のbe動詞の短縮した否定形を書きなさい。\nare の否定短縮形",
+          "answer": "aren't",
+          "hint": "are not の短縮形です。",
+          "explanation": "are not → aren't（'t でshortにする）"
+        },
+        {
+          "id": "bb20",
+          "type": "choice",
+          "question": "「彼は背が高いですか？」を英語にすると？",
+          "choices": [
+            "He is tall?",
+            "Is he tall?",
+            "Are he tall?",
+            "Does he tall?"
+          ],
+          "answer": 1,
+          "hint": "疑問文はbe動詞を前に出します。",
+          "explanation": "be動詞を主語の前に出します。Is he tall?"
+        }
+      ]
+    },
+    "advanced": {
+      "id": "ex_b01_adv",
+      "title": "応用ワーク",
+      "questions": [
+        {
+          "id": "ba01",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「私は佐藤ユキです。」",
+          "answer": "I am Sato Yuki.",
+          "hint": "Iのあとはam！",
+          "explanation": "I am Sato Yuki.（I→am）"
+        },
+        {
+          "id": "ba02",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「ケンは野球選手です。」",
+          "answer": "Ken is a baseball player.",
+          "hint": "Kenは単数名詞なのでisを使います。",
+          "explanation": "Ken is a baseball player.（Ken→is）"
+        },
+        {
+          "id": "ba03",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「私たちは中学1年生です。」",
+          "answer": "We are first-year junior high school students.",
+          "hint": "WeのあとはareだけOK。",
+          "explanation": "We are first-year junior high school students.（We→are）"
+        },
+        {
+          "id": "ba04",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「あれは私の学校です。」",
+          "answer": "That is my school.",
+          "hint": "Thatは単数なのでisを使います。",
+          "explanation": "That is my school.（That→is）"
+        },
+        {
+          "id": "ba05",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「彼らは私の友達です。」",
+          "answer": "They are my friends.",
+          "hint": "TheyのあとはareだけOK。",
+          "explanation": "They are my friends.（They→are）"
+        },
+        {
+          "id": "ba06",
+          "type": "rewrite",
+          "question": "次の文を否定文に書き換えなさい。\nHe is tall.",
+          "placeholder": "He ...",
+          "answer": "He is not tall.",
+          "hint": "isのあとにnotを置きます。",
+          "explanation": "He is not tall.（is→is not）短縮形：He isn't tall.でもOK"
+        },
+        {
+          "id": "ba07",
+          "type": "rewrite",
+          "question": "次の文を疑問文に書き換えなさい。\nShe is a singer.",
+          "placeholder": "Is ...",
+          "answer": "Is she a singer?",
+          "hint": "be動詞（is）を主語（she）の前に出します。",
+          "explanation": "Is she a singer?（isを文頭に移動、最後は?）"
+        },
+        {
+          "id": "ba08",
+          "type": "rewrite",
+          "question": "次の文を否定文に書き換えなさい。\nThey are happy.",
+          "placeholder": "They ...",
+          "answer": "They are not happy.",
+          "hint": "areのあとにnotを置きます。",
+          "explanation": "They are not happy.（are→are not）短縮形：They aren't happy.でもOK"
+        }
+      ]
+    }
+  },
+  "miniTest": {
+    "id": "test_b01",
+    "title": "定期テスト風 小テスト",
+    "timeLimit": 420,
+    "passingScore": 70,
+    "totalPoints": 37,
+    "questions": [
+      {
+        "id": "tb01",
+        "type": "transform",
+        "points": 4,
+        "question": "（　）に入る正しいbe動詞を書きなさい。\nI ( ) Taro.",
+        "answer": "am",
+        "hint": "Iのあとは？",
+        "explanation": "I am Taro.（I→am）"
+      },
+      {
+        "id": "tb02",
+        "type": "transform",
+        "points": 4,
+        "question": "（　）に入る正しいbe動詞を書きなさい。\nThey ( ) from Japan.",
+        "answer": "are",
+        "hint": "Theyのあとは？",
+        "explanation": "They are from Japan.（They→are）"
+      },
+      {
+        "id": "tb03",
+        "type": "transform",
+        "points": 4,
+        "question": "（　）に入る正しいbe動詞を書きなさい。\nYuki ( ) a kind girl.",
+        "answer": "is",
+        "hint": "Yukiは単数名詞です。",
+        "explanation": "Yuki is a kind girl.（単数名詞→is）"
+      },
+      {
+        "id": "tb04",
+        "type": "choice",
+        "points": 4,
+        "question": "正しい英文を選びなさい。",
+        "choices": [
+          "I is a student.",
+          "I am a student.",
+          "I are a student.",
+          "I be a student."
+        ],
+        "answer": 1,
+        "explanation": "I am a student.（I→am）"
+      },
+      {
+        "id": "tb05",
+        "type": "choice",
+        "points": 4,
+        "question": "「あなたは親切ですね」を英語にすると？",
+        "choices": [
+          "You am kind.",
+          "You is kind.",
+          "You are kind.",
+          "You be kind."
+        ],
+        "answer": 2,
+        "explanation": "You are kind.（You→are）"
+      },
+      {
+        "id": "tb06",
+        "type": "mistake",
+        "points": 5,
+        "question": "次の文の間違いを1つ見つけて正しく直しなさい。\nShe are my best friend.",
+        "wrongWord": "are",
+        "answer": "is",
+        "explanation": "She is my best friend.（She→is）"
+      },
+      {
+        "id": "tb07",
+        "type": "writing",
+        "points": 12,
+        "question": "次の日本文を英語にしなさい（配点大）。\n「ケンと私は同じクラスです。」",
+        "answer": "Ken and I are in the same class.",
+        "hint": "Ken and Iは複数扱いなのでareを使います。",
+        "explanation": "Ken and I are in the same class.（Ken and I→are）"
+      }
+    ]
+  },
+  "teacherNote": {
+    "content": "【教員視点の解説】\nbe動詞は中学英語の最初の難関です。特に「IはamだけOK」「He/She/ItはisだけOK」「You/We/TheyはareだけOK」という3パターンの組み合わせを確実に覚えさせることが重要です。\n\n【指導のポイント】\n1. まず主語を3グループに分けて整理（I / He-She-It / You-We-They）\n2. それぞれのグループに対応するbe動詞を暗記させる\n3. 否定文はbe動詞のすぐ後ろにnotを置くことを強調\n4. 疑問文はbe動詞を文頭に移動することを強調\n5. 「She is → She's」「I am → I'm」の短縮形も同時に教えると定着しやすい\n\n【定期テスト頻出ポイント】\n- 主語に合ったbe動詞の選択（am/is/are）\n- 否定文の作り方（is not / isn't など）\n- 疑問文の作り方（Is she...? / Are they...?）\n- よくあるミス：I is / She are / They is など\n\n【注意事項】\n「Ken and I」「my parents」など複数扱いになる主語に注意。定期テストで問われることがあります。"
+  },
+  "faq": [
+    {
+      "q": "なぜIはamなの？",
+      "a": "英語の歴史的な理由によりIだけamが使われています。「IはamだけOK！」と覚えてしまいましょう。am/is/areはすべて同じbe動詞の仲間で、主語によって形が変わります。"
+    },
+    {
+      "q": "短縮形（I'm / She's）はどちらが正しいの？",
+      "a": "どちらも正しいです。I am = I'm、She is = She's、They are = They're など。会話文や日常では短縮形がよく使われます。テストでは長い形も短縮形も両方OKが多いです。"
+    },
+    {
+      "q": "be動詞と一般動詞（play / likeなど）の違いは？",
+      "a": "be動詞（am/is/are）は「〜です」「〜にいる」を表します。一般動詞（play/like/goなど）は「〜する」という動作を表します。1つの文にどちらか一方だけが来ます（両方は使わない）。"
+    },
+    {
+      "q": "YouはI（私）と話している相手なのに、なぜareを使うの？",
+      "a": "英語の文法的な決まりです。Youは「あなた」「あなたたち」の両方に使えます。どちらの場合もareを使います。"
+    },
+    {
+      "q": "疑問文に「Yes/No」で答えるとき、どう言えばいい？",
+      "a": "Is he tall? → Yes, he is. / No, he isn't. という形で答えます。Are you a student? → Yes, I am. / No, I'm not. のように、質問に出てきたbe動詞をそのまま使って答えます。"
+    }
+  ],
+  "questionPrompt": "be動詞でわからないことがあったら、すぐ質問してね！「どの主語で」「どのbe動詞を使えばいいか」がわからないとき、具体的に書いてくれると答えやすいです。"
+}

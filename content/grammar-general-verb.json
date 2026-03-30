@@ -1,0 +1,580 @@
+{
+  "unit": {
+    "id": "g01",
+    "title": "一般動詞",
+    "grade": 1,
+    "difficulty": 2,
+    "totalQuestions": 37,
+    "estimatedMinutes": 25,
+    "goal": "一般動詞の肯定文・否定文（don't/doesn't）・疑問文（Do/Does）が作れるようになる",
+    "description": "「〜します」「〜しますか？」を一般動詞で表現しよう"
+  },
+  "explanation": {
+    "title": "一般動詞とは？",
+    "intro": "「サッカーをする」「音楽が好き」「英語を勉強する」などの動作・状態を表す動詞を「一般動詞」と言います。be動詞（am/is/are）以外の動詞はすべて一般動詞です。",
+    "rules": [
+      {
+        "pattern": "肯定文（〜します）",
+        "rule": "主語 ＋ 動詞（原形）＋ ...",
+        "examples": [
+          "I play soccer.",
+          "We like music.",
+          "She studies English.（三単現→studies）"
+        ]
+      },
+      {
+        "pattern": "否定文（〜しません）",
+        "rule": "主語 ＋ do not[don't] ＋ 動詞の原形 ＋ ...\n※三単現の主語は does not[doesn't]",
+        "examples": [
+          "I don't play soccer.",
+          "We don't like cats.",
+          "She doesn't study math.（三単現→doesn't）"
+        ]
+      },
+      {
+        "pattern": "疑問文（〜しますか？）",
+        "rule": "Do ＋ 主語 ＋ 動詞の原形 ＋ ...?\n※三単現の主語は Does",
+        "examples": [
+          "Do you play soccer?",
+          "Does she study English?"
+        ]
+      },
+      {
+        "pattern": "疑問文への答え方",
+        "rule": "Yes, 主語 ＋ do / does.\nNo, 主語 ＋ don't / doesn't.",
+        "examples": [
+          "Yes, I do.",
+          "No, she doesn't.",
+          "Yes, they do.",
+          "No, he doesn't."
+        ]
+      }
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "I don't likes music.",
+        "correct": "I don't like music.",
+        "tip": "don't/doesn'tのあとは動詞の原形！likesはNG"
+      },
+      {
+        "wrong": "Does she plays tennis?",
+        "correct": "Does she play tennis?",
+        "tip": "doesのあとは動詞の原形！playsはNG"
+      },
+      {
+        "wrong": "Do she study?",
+        "correct": "Does she study?",
+        "tip": "She/He/Itには必ずDoesを使う！DoはNG"
+      }
+    ]
+  },
+  "quickCheck": {
+    "id": "qc_g01",
+    "title": "クイックチェック",
+    "questions": [
+      {
+        "id": "qcg01",
+        "type": "choice",
+        "question": "「私は音楽が好きではありません」を英語にすると？",
+        "choices": [
+          "I don't like music.",
+          "I doesn't like music.",
+          "I don't likes music.",
+          "I am not like music."
+        ],
+        "answer": 0,
+        "explanation": "Iのあとはdon't（do not）。don'tのあとは動詞の原形（like）！"
+      },
+      {
+        "id": "qcg02",
+        "type": "choice",
+        "question": "「彼女はテニスをしますか？」の正しい英文は？",
+        "choices": [
+          "Do she play tennis?",
+          "Does she play tennis?",
+          "Does she plays tennis?",
+          "Is she play tennis?"
+        ],
+        "answer": 1,
+        "explanation": "She（三単現）にはDoesを使い、動詞は原形（play）！"
+      }
+    ]
+  },
+  "exercises": {
+    "basic": {
+      "id": "ex_g01_basic",
+      "title": "基礎ワーク",
+      "questions": [
+        {
+          "id": "gb01",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nI ( ) play soccer.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "isn't"
+          ],
+          "answer": 0,
+          "hint": "Iの否定文はdon'tです。",
+          "explanation": "I don't play soccer.（I→don't）"
+        },
+        {
+          "id": "gb02",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nShe ( ) like cats.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "isn't"
+          ],
+          "answer": 1,
+          "hint": "She（三単現）の否定文はdoesn'tです。",
+          "explanation": "She doesn't like cats.（She→doesn't）"
+        },
+        {
+          "id": "gb03",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nWe ( ) eat lunch here.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "aren't"
+          ],
+          "answer": 0,
+          "hint": "We（複数）の否定文はdon'tです。",
+          "explanation": "We don't eat lunch here.（We→don't）"
+        },
+        {
+          "id": "gb04",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nMy father ( ) watch TV.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "isn't"
+          ],
+          "answer": 1,
+          "hint": "My father（単数）の否定文はdoesn'tです。",
+          "explanation": "My father doesn't watch TV.（単数名詞→doesn't）"
+        },
+        {
+          "id": "gb05",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nThey ( ) live here.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "aren't"
+          ],
+          "answer": 0,
+          "hint": "They（複数）の否定文はdon'tです。",
+          "explanation": "They don't live here.（They→don't）"
+        },
+        {
+          "id": "gb06",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nKen ( ) have a bike.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "isn't"
+          ],
+          "answer": 1,
+          "hint": "Ken（単数）の否定文はdoesn'tです。",
+          "explanation": "Ken doesn't have a bike.（単数名詞→doesn't）"
+        },
+        {
+          "id": "gb07",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nI ( ) speak Chinese.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "am not"
+          ],
+          "answer": 0,
+          "hint": "Iの否定文はdon'tです。",
+          "explanation": "I don't speak Chinese.（I→don't）"
+        },
+        {
+          "id": "gb08",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\nYuki ( ) study math.",
+          "choices": [
+            "don't",
+            "doesn't",
+            "not",
+            "isn't"
+          ],
+          "answer": 1,
+          "hint": "Yuki（三単現）の否定文はdoesn'tです。",
+          "explanation": "Yuki doesn't study math.（三単現→doesn't）"
+        },
+        {
+          "id": "gb09",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\n( ) you play tennis?",
+          "choices": [
+            "Do",
+            "Does",
+            "Is",
+            "Are"
+          ],
+          "answer": 0,
+          "hint": "you（複数扱い）の疑問文はDoです。",
+          "explanation": "Do you play tennis?（you→Do）"
+        },
+        {
+          "id": "gb10",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\n( ) she like music?",
+          "choices": [
+            "Do",
+            "Does",
+            "Is",
+            "Are"
+          ],
+          "answer": 1,
+          "hint": "she（三単現）の疑問文はDoesです。",
+          "explanation": "Does she like music?（she→Does）"
+        },
+        {
+          "id": "gb11",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\n( ) they study English?",
+          "choices": [
+            "Do",
+            "Does",
+            "Is",
+            "Are"
+          ],
+          "answer": 0,
+          "hint": "they（複数）の疑問文はDoです。",
+          "explanation": "Do they study English?（they→Do）"
+        },
+        {
+          "id": "gb12",
+          "type": "choice",
+          "question": "「Do you eat breakfast?」に「Yes」で答えると？",
+          "choices": [
+            "Yes, I am.",
+            "Yes, I do.",
+            "Yes, I does.",
+            "Yes, you do."
+          ],
+          "answer": 1,
+          "hint": "DoのときはdoまたはdoesでYes/No答え。",
+          "explanation": "Yes, I do.（Do→do で答える）"
+        },
+        {
+          "id": "gb13",
+          "type": "choice",
+          "question": "「Does she play soccer?」に「No」で答えると？",
+          "choices": [
+            "No, she don't.",
+            "No, she doesn't.",
+            "No, she isn't.",
+            "No, she does."
+          ],
+          "answer": 1,
+          "hint": "DoesのときはdoesまたはdoesでYes/No答え。",
+          "explanation": "No, she doesn't.（Does→doesn'tで答える）"
+        },
+        {
+          "id": "gb14",
+          "type": "choice",
+          "question": "（　）に入る正しい語を選びなさい。\n( ) Ken play baseball?",
+          "choices": [
+            "Do",
+            "Does",
+            "Is",
+            "Has"
+          ],
+          "answer": 1,
+          "hint": "Ken（三単現）の疑問文はDoesです。",
+          "explanation": "Does Ken play baseball?（Ken→Does）"
+        },
+        {
+          "id": "gb15",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。",
+          "words": [
+            "don't",
+            "I",
+            "like",
+            "cats"
+          ],
+          "answer": "I don't like cats.",
+          "hint": "Iの否定文はdon'tを使います。",
+          "explanation": "I don't like cats.（I don't + 動詞の原形）"
+        },
+        {
+          "id": "gb16",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。",
+          "words": [
+            "soccer",
+            "Does",
+            "play",
+            "Ken?"
+          ],
+          "answer": "Does Ken play soccer?",
+          "hint": "Kenは三単現なのでDoesを使います。",
+          "explanation": "Does Ken play soccer?（三単現→Does、動詞は原形）"
+        },
+        {
+          "id": "gb17",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。",
+          "words": [
+            "doesn't",
+            "she",
+            "music",
+            "like"
+          ],
+          "answer": "She doesn't like music.",
+          "hint": "sheは三単現なのでdoesn'tを使います。",
+          "explanation": "She doesn't like music.（三単現→doesn't、動詞は原形）"
+        },
+        {
+          "id": "gb18",
+          "type": "sort",
+          "question": "並び替えて正しい英文を作りなさい。",
+          "words": [
+            "Do",
+            "English",
+            "you",
+            "speak?"
+          ],
+          "answer": "Do you speak English?",
+          "hint": "youの疑問文はDoを使います。",
+          "explanation": "Do you speak English?（you→Do、動詞は原形）"
+        },
+        {
+          "id": "gb19",
+          "type": "mistake",
+          "question": "次の英文の間違いを見つけて正しく直しなさい。\nShe don't play tennis.",
+          "wrongWord": "don't",
+          "answer": "doesn't",
+          "explanation": "Sheは三単現なのでdoesn'tを使います。She doesn't play tennis."
+        },
+        {
+          "id": "gb20",
+          "type": "mistake",
+          "question": "次の英文の間違いを見つけて正しく直しなさい。\nDoes she plays music?",
+          "wrongWord": "plays",
+          "answer": "play",
+          "explanation": "doesのあとは動詞の原形！ Does she play music?"
+        }
+      ]
+    },
+    "advanced": {
+      "id": "ex_g01_adv",
+      "title": "応用ワーク",
+      "questions": [
+        {
+          "id": "ga01",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「私はサッカーをしません。」",
+          "answer": "I don't play soccer.",
+          "hint": "Iの否定文はdon't + 動詞の原形です。",
+          "explanation": "I don't play soccer.（I→don't play）"
+        },
+        {
+          "id": "ga02",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「田中先生は英語を教えますか？」",
+          "answer": "Does Mr. Tanaka teach English?",
+          "hint": "Mr. Tanakaは三単現なのでDoesを使います。",
+          "explanation": "Does Mr. Tanaka teach English?（三単現→Does、動詞は原形）"
+        },
+        {
+          "id": "ga03",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「はい、教えます。」（前の問題の答え）",
+          "answer": "Yes, he does.",
+          "hint": "Does→doesで答えます。",
+          "explanation": "Yes, he does.（Does→doesで答える）"
+        },
+        {
+          "id": "ga04",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「ユキは音楽を聴きますか？ いいえ、聴きません。」",
+          "answer": "Does Yuki listen to music? No, she doesn't.",
+          "hint": "Yukiは三単現なのでDoesを使います。",
+          "explanation": "Does Yuki listen to music? No, she doesn't.（三単現→Does/doesn't）"
+        },
+        {
+          "id": "ga05",
+          "type": "writing",
+          "question": "次の日本文を英語にしなさい。\n「私たちはここに住んでいません。」",
+          "answer": "We don't live here.",
+          "hint": "Weの否定文はdon'tを使います。",
+          "explanation": "We don't live here.（We→don't + 動詞の原形）"
+        },
+        {
+          "id": "ga06",
+          "type": "rewrite",
+          "question": "次の文を否定文に書き換えなさい。\nI play soccer.",
+          "placeholder": "I ...",
+          "answer": "I don't play soccer.",
+          "hint": "Iの否定文はdon't + 動詞の原形です。",
+          "explanation": "I don't play soccer.（I don't + 動詞の原形）"
+        },
+        {
+          "id": "ga07",
+          "type": "rewrite",
+          "question": "次の文を疑問文に書き換えなさい。\nShe likes music.",
+          "placeholder": "Does ...",
+          "answer": "Does she like music?",
+          "hint": "三単現（she）の疑問文はDoes + 主語 + 動詞の原形です。",
+          "explanation": "Does she like music?（likesの三単現sを外して原形に）"
+        },
+        {
+          "id": "ga08",
+          "type": "rewrite",
+          "question": "次の疑問文にYesで答えなさい。\nDo they study English?",
+          "placeholder": "Yes, ...",
+          "answer": "Yes, they do.",
+          "hint": "Do→doで答えます。",
+          "explanation": "Yes, they do.（Do→doで答える）"
+        }
+      ]
+    }
+  },
+  "miniTest": {
+    "id": "test_g01",
+    "title": "定期テスト風 小テスト",
+    "timeLimit": 420,
+    "passingScore": 70,
+    "totalPoints": 37,
+    "questions": [
+      {
+        "id": "tg01",
+        "type": "choice",
+        "points": 4,
+        "question": "（　）に入る正しい語を選びなさい。\nI ( ) like cats.",
+        "choices": [
+          "don't",
+          "doesn't",
+          "not",
+          "isn't"
+        ],
+        "answer": 0,
+        "explanation": "I don't like cats.（I→don't）"
+      },
+      {
+        "id": "tg02",
+        "type": "choice",
+        "points": 4,
+        "question": "（　）に入る正しい語を選びなさい。\nShe ( ) study math.",
+        "choices": [
+          "don't",
+          "doesn't",
+          "not",
+          "isn't"
+        ],
+        "answer": 1,
+        "explanation": "She doesn't study math.（She→doesn't）"
+      },
+      {
+        "id": "tg03",
+        "type": "choice",
+        "points": 4,
+        "question": "（　）に入る正しい語を選びなさい。\n( ) Ken play baseball?",
+        "choices": [
+          "Do",
+          "Does",
+          "Is",
+          "Has"
+        ],
+        "answer": 1,
+        "explanation": "Does Ken play baseball?（三単現→Does）"
+      },
+      {
+        "id": "tg04",
+        "type": "choice",
+        "points": 4,
+        "question": "「Does she eat breakfast?」に「Yes」で答えると？",
+        "choices": [
+          "Yes, she do.",
+          "Yes, she does.",
+          "Yes, she is.",
+          "Yes, she eats."
+        ],
+        "answer": 1,
+        "explanation": "Yes, she does.（Does→doesで答える）"
+      },
+      {
+        "id": "tg05",
+        "type": "choice",
+        "points": 4,
+        "question": "正しい英文を選びなさい。",
+        "choices": [
+          "Does she plays tennis?",
+          "Does she play tennis?",
+          "Do she play tennis?",
+          "Does she playing tennis?"
+        ],
+        "answer": 1,
+        "explanation": "Does she play tennis?（三単現→Does、動詞は原形play）"
+      },
+      {
+        "id": "tg06",
+        "type": "sort",
+        "points": 5,
+        "question": "並び替えて正しい文を作りなさい。",
+        "words": [
+          "doesn't",
+          "Ken",
+          "music",
+          "like"
+        ],
+        "answer": "Ken doesn't like music.",
+        "explanation": "Ken doesn't like music.（三単現→doesn't、動詞は原形）"
+      },
+      {
+        "id": "tg07",
+        "type": "writing",
+        "points": 12,
+        "question": "次の日本文を英語にしなさい（配点大）。\n「私の姉はここで英語を教えていません。」",
+        "answer": "My sister doesn't teach English here.",
+        "hint": "My sisterは三単現なのでdoesn'tを使います。",
+        "explanation": "My sister doesn't teach English here.（三単現→doesn't + 動詞の原形）"
+      }
+    ]
+  },
+  "teacherNote": {
+    "content": "【教員視点の解説】\n一般動詞の否定文・疑問文は、中1英語の中でも最も重要な単元の1つです。特に「don't vs doesn't」「Do vs Does」の使い分けと、「doesのあとは動詞の原形！」という点が定期テストの最頻出ポイントです。\n\n【指導のポイント】\n1. まず肯定文（I play soccer.）を確認してから否定・疑問に展開する\n2. 「主語が三単現かどうか」で don't/doesn't と Do/Does を使い分けることを強調\n3. 「doesのあとは動詞の原形！三単現のsはdoesに移っている」と説明すると理解しやすい\n4. Does she plays?（×）→ Does she play?（○）のミスパターンを繰り返し練習する\n5. 答え方「Yes, I do. / No, she doesn't.」もセットで覚えさせる\n\n【定期テスト頻出ポイント】\n- 主語に合わせたdon't/doesn'tの選択\n- Do/Doesの選択\n- doesのあとの動詞が原形かどうか（Does she plays?→×plays→○play）\n- Yes/Noの答え方（Yes, she does. / No, I don't.）\n\n【三単現との連携】\n三単現のsを学んだあとにこの単元を学ぶと効果的です。「sはdoes/doesn'tに移る」という説明が三単現の復習にもなります。"
+  },
+  "faq": [
+    {
+      "q": "don'tとdoesn'tの違いは何ですか？",
+      "a": "主語によって使い分けます。He/She/It や単数の名詞（Ken、my sisterなど）が主語のときはdoesn't、それ以外（I/You/We/Theyなど）のときはdon'tを使います。三単現のs（He plays→He doesn't play）と同じルールです。"
+    },
+    {
+      "q": "doesのあとはなぜ動詞の原形なの？",
+      "a": "「三単現のs」は動詞に付くか、doesに付くかのどちらかです。She plays soccer.（動詞にs）→ She doesn't play soccer.（doesにs相当が移動、動詞は原形に戻る）という考え方です。"
+    },
+    {
+      "q": "be動詞の疑問文との違いは？",
+      "a": "be動詞の疑問文：be動詞を文頭に出す（Is she tall?）。一般動詞の疑問文：Do/Doesを文頭に付ける（Does she play tennis?）。同じ文に両方は使いません。"
+    },
+    {
+      "q": "Do you like music?への「はい」の答え方は？",
+      "a": "Yes, I do. が正解です。DoのときはdoかdoesでYes/No答えします。Does he like music? → Yes, he does. / No, he doesn't. のように主語に合わせて使い分けます。"
+    },
+    {
+      "q": "疑問文で Does she plays? と Does she play? どちらが正しい？",
+      "a": "Does she play? が正しいです！doesのあとは必ず動詞の原形（sなし）です。Does she plays?（×）← よくあるミス。「doesのあとは原形！」と覚えましょう。"
+    }
+  ],
+  "questionPrompt": "一般動詞の否定文・疑問文でわからないことがあったら、すぐ質問してね！「don't と doesn't、どちらを使えばいいか」「doesのあとの形が合っているか」など、具体的な文を書いてくれると答えやすいです。"
+}

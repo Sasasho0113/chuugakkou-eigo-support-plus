@@ -1,0 +1,968 @@
+/* ============================================
+   中学校英語サポート＋ - CSS（全面再設計）
+   親しみやすい・元気・達成感・迷わない
+   ============================================ */
+
+/* ============================================
+   1. CSS カスタムプロパティ（色・サイズ）
+   ============================================ */
+:root {
+  /* メインカラー（明るい青） */
+  --primary: #3B82F6;
+  --primary-dark: #2563EB;
+  --primary-light: #EFF6FF;
+  --primary-mid: #BFDBFE;
+
+  /* サブカラー（鮮やかな緑） */
+  --secondary: #10B981;
+  --secondary-light: #ECFDF5;
+  --secondary-dark: #059669;
+
+  /* アクセント（明るいオレンジ） */
+  --accent: #F97316;
+  --accent-light: #FFF7ED;
+  --accent-mid: #FED7AA;
+
+  /* 正解・不正解 */
+  --correct: #22C55E;
+  --correct-light: #DCFCE7;
+  --incorrect: #EF4444;
+  --incorrect-light: #FEE2E2;
+
+  /* 中間色（ヒント・注意） */
+  --warning: #FBBF24;
+  --warning-light: #FFFBEB;
+
+  /* ニュートラル */
+  --bg: #F0F9FF;
+  --surface: #FFFFFF;
+  --text: #1E293B;
+  --text-secondary: #64748B;
+  --text-light: #94A3B8;
+  --border: #E2E8F0;
+
+  /* シャドウ */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow: 0 2px 8px rgba(0,0,0,0.10);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.14);
+
+  /* 角丸 */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* タイポグラフィ */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 36px;
+
+  /* 行間 */
+  --leading-tight: 1.3;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+}
+
+/* ============================================
+   2. リセット・ベーススタイル
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================
+   3. アプリレイアウト
+   ============================================ */
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.screen {
+  display: none;
+  padding: 16px 16px 96px;
+  min-height: calc(100dvh - 56px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen.active {
+  display: block;
+  animation: fadeSlideUp 0.22s ease-out;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   4. ヘッダー
+   ============================================ */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  color: white;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+  box-shadow: var(--shadow);
+}
+
+.header-title {
+  flex: 1;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.3px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: white;
+}
+
+.header-logo-plus {
+  color: var(--warning);
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s;
+}
+
+.back-btn:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.back-btn.hidden {
+  display: none;
+}
+
+/* ============================================
+   5. BottomNavBar
+   ============================================ */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: 68px;
+  background: white;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.15s;
+  position: relative;
+}
+
+.nav-item.active {
+  color: var(--primary);
+}
+
+.nav-item.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 0 0 3px 3px;
+}
+
+.nav-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* ============================================
+   6. ボタン
+   ============================================ */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transition: transform 0.12s, box-shadow 0.12s, opacity 0.12s;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  text-align: center;
+}
+
+.btn:active {
+  transform: scale(0.96);
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  font-size: var(--text-base);
+  height: 54px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: var(--text-base);
+  height: 54px;
+}
+
+.btn-success {
+  background: var(--secondary);
+  color: white;
+  font-size: var(--text-base);
+  height: 54px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-size: var(--text-base);
+  height: 54px;
+}
+
+.btn-sm {
+  height: 40px;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-sm);
+  padding: 0 16px;
+  width: auto;
+}
+
+.btn-xs {
+  height: 32px;
+  font-size: var(--text-xs);
+  border-radius: var(--radius-xs);
+  padding: 0 10px;
+  width: auto;
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   7. カード
+   ============================================ */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  border: 1px solid transparent;
+}
+
+.card-tap {
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card-tap:active {
+  transform: scale(0.97);
+  box-shadow: var(--shadow-sm);
+}
+
+/* グリーティングカード */
+.greeting-card {
+  background: linear-gradient(135deg, var(--primary) 0%, #6366F1 100%);
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.greeting-card::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+/* ストリークカード */
+.streak-card {
+  background: linear-gradient(135deg, var(--accent) 0%, #F59E0B 100%);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+/* ============================================
+   8. 進捗バー
+   ============================================ */
+.progress-bar {
+  height: 10px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: white;
+  border-radius: var(--radius-full);
+  opacity: 0.6;
+}
+
+/* 問題の進捗バー */
+.quiz-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quiz-progress-label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* === バッジ・タグ === */
+.badge-correct {
+  display: inline-block;
+  background-color: var(--secondary-light);
+  color: #065F46;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.badge-incorrect {
+  display: inline-block;
+  background-color: var(--error-light);
+  color: #991B1B;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.badge-hint {
+  display: inline-block;
+  background-color: var(--accent-light);
+  color: #92400E;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tag-gray {
+  display: inline-block;
+  background-color: #F1F5F9;
+  color: var(--text-secondary);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* === 入力フォーム === */
+.input-field {
+  width: 100%;
+  height: 48px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+}
+
+.input-field:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.textarea {
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+  color: var(--text);
+}
+
+.textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* === 単元カード === */
+.unit-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.unit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.unit-info {
+  flex: 1;
+}
+
+.unit-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.unit-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.unit-progress {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* === 問題カード（ワーク画面） === */
+.question-card {
+  border-left: 4px solid var(--primary);
+}
+
+.question-text {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.choice-btn {
+  background-color: white;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  color: var(--text);
+}
+
+.choice-btn:active {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+.choice-btn.correct {
+  border-color: var(--secondary);
+  background-color: var(--secondary-light);
+  color: #065F46;
+}
+
+.choice-btn.incorrect {
+  border-color: var(--error);
+  background-color: var(--error-light);
+  color: #991B1B;
+}
+
+.choice-btn:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* === 並び替え問題 === */
+.sort-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.word-chip {
+  background-color: white;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.word-chip:active {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
+.word-chip.used {
+  opacity: 0.35;
+  cursor: default;
+  background-color: #F1F5F9;
+  border-color: var(--border);
+  color: var(--text-light);
+}
+
+.sort-answer {
+  min-height: 48px;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+  background-color: #F8FAFC;
+}
+
+.sort-word-selected {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sort-word-selected:active {
+  opacity: 0.8;
+}
+
+/* === フィードバック === */
+.feedback-box {
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 16px;
+}
+
+.feedback-correct {
+  background-color: var(--secondary-light);
+  border-left: 4px solid var(--secondary);
+}
+
+.feedback-incorrect {
+  background-color: var(--error-light);
+  border-left: 4px solid var(--error);
+}
+
+.feedback-label {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.feedback-correct .feedback-label {
+  color: #065F46;
+}
+
+.feedback-incorrect .feedback-label {
+  color: #991B1B;
+}
+
+.feedback-explanation {
+  font-size: 14px;
+  margin-top: 6px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* === 学習記録カレンダー === */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.calendar-day {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin: 0 auto;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.calendar-day.done {
+  background-color: var(--primary);
+  color: white;
+}
+
+.calendar-day.today {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* === タブ === */
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 0 16px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* === その他 === */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0 12px;
+  color: var(--text);
+}
+
+.section-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 16px 0;
+}
+
+.message-box {
+  background-color: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--primary-dark);
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* === アニメーション === */
+@keyframes slideUp {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.screen.active {
+  animation: slideUp 0.2s ease;
+}
+
+/* === スマートフォン対応 === */
+@media (max-width: 480px) {
+  .app-container {
+    max-width: 100%;
+  }
+
+  .app-header {
+    max-width: 100%;
+  }
+
+  .bottom-nav {
+    max-width: 100%;
+  }
+
+  .screen {
+    padding: 16px;
+    min-height: calc(100vh - 56px - 64px);
+  }
+}
+
+/* === チェックボックス・ラジオカスタマイズ === */
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* === リスト === */
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* === テーブル === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background-color: var(--bg);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+td {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* === セレクトボックス === */
+select {
+  width: 100%;
+  height: 48px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  cursor: pointer;
+  background-color: white;
+}
+
+select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* === スクロール === */
+.screen::-webkit-scrollbar {
+  width: 6px;
+}
+
+.screen::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screen::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.screen::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}

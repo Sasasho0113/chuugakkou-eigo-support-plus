@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中学校英語サポート＋ - 定期テストで点が取れる英語学習</title>
+
+  <!-- Google Fonts: Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       CSS変数 & リセット
+       ============================================ */
+    :root {
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --primary-light: #EFF6FF;
+      --secondary: #10B981;
+      --secondary-light: #ECFDF5;
+      --accent: #F97316;
+      --accent-light: #FFF7ED;
+      --text: #1E293B;
+      --text-secondary: #64748B;
+      --border: #E2E8F0;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --error: #EF4444;
+      --error-light: #FEE2E2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ============================================
+       ヘッダー
+       ============================================ */
+    #site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: transparent;
+      transition: background 0.25s, box-shadow 0.25s;
+    }
+
+    #site-header.scrolled {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+    }
+
+    .site-logo {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .btn-header-cta {
+      background: var(--accent);
+      color: white;
+      border-radius: 20px;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+
+    .btn-header-cta:active {
+      transform: scale(0.97);
+    }
+
+    /* ============================================
+       共通コンテナ
+       ============================================ */
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ============================================
+       セクション1: ファーストビュー（Hero）
+       ============================================ */
+    .hero {
+      background: linear-gradient(160deg, #1D4ED8 0%, #2563EB 50%, #3B82F6 100%);
+      color: white;
+      padding: 48px 0 40px;
+    }
+
+    .hero-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.85;
+      background: rgba(255, 255, 255, 0.15);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .hero-headline {
+      font-size: clamp(24px, 6vw, 30px);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+
+    .hero-highlight {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      padding: 0 4px;
+      color: #FDE68A;
+    }
+
+    .hero-subtext {
+      font-size: 15px;
+      line-height: 1.75;
+      opacity: 0.9;
+      margin-bottom: 28px;
+    }
+
+    .btn-hero-cta {
+      display: block;
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 16px 24px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+      transition: transform 0.15s;
+    }
+
+    .btn-hero-cta:active {
+      transform: scale(0.97);
+    }
+
+    .hero-note {
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.75;
+      margin-top: 10px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 14px 8px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .stat-icon {
+      font-size: 22px;
+    }
+
+    .stat-value {
+      font-size: 14px;
+      font-weight: 800;
+      margin-top: 4px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    /* ============================================
+       セクション2: ビフォーアフター
+       ============================================ */
+    .before-after {
+      background: white;
+      padding: 48px 0;
+    }
+
+    .section-eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 24px;
+      line-height: 1.35;
+    }
+
+    .ba-cards {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ba-card {
+      flex: 1;
+      border-radius: 14px;
+      padding: 20px 14px;
+      text-align: center;
+    }
+
+    .ba-before {
+      background: var(--error-light);
+      border: 2px solid var(--error);
+    }
+
+    .ba-after {
+      background: var(--secondary-light);
+      border: 2px solid var(--secondary);
+    }
+
+    .ba-badge {
+      font-size: 12px;
+      font-weight: 800;
+      color: white;
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .ba-before .ba-badge {
+      background: var(--error);
+    }
+
+    .ba-after .ba-badge {
+      background: var(--secondary);
+    }
+
+    .ba-score {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .ba-before .ba-score {
+      color: var(--error);
+    }
+
+    .ba-after .ba-score {
+      color: var(--secondary);
+    }
+
+    .ba-quote {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .ba-arrow {
+      font-size: 24px;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+    }
+
+    .ba-note {
+      background: var(--accent-light);
+      border: 1px solid #FED7AA;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 14px;
+      color: #92400E;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       セクション3: こんな悩み、ありますか？
+       ============================================ */
+    .concerns {
+      background: var(--primary-light);
+      padding: 48px 0;
+    }
+
+    .concern-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .concern-item {
+      background: white;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      border-left: 4px solid var(--primary);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ============================================
+       セクション4: 解決策
+       ============================================ */
+    .solution {
+      background: white;
+      padding: 48px 0;
+    }
+
+    .solution-card {
+      background: linear-gradient(135deg, var(--primary), #4F46E5);
+      border-radius: 20px;
+      padding: 28px 22px;
+      color: white;
+    }
+
+    .solution-title {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 22px;
+    }
+
+    .solution-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .solution-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .solution-num {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .solution-item p {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .btn-solution-cta {
+      display: block;
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+
+    .btn-solution-cta:active {
+      transform: scale(0.97);
+    }
+
+    /* ============================================
+       セクション5: 4つの特徴
+       ============================================ */
+    .features {
+      background: var(--bg);
+      padding: 48px 0;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+      border: 1px solid var(--border);
+    }
+
+    .feature-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .feature-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .feature-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       セクション6: 実際の教材サンプル
+       ============================================ */
+    .sample {
+      background: white;
+      padding: 48px 0;
+    }
+
+    .sample-explain-card {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 18px 16px;
+      margin-bottom: 14px;
+    }
+
+    .sample-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .sample-card-body {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .sample-rule-table {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .rule-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      padding: 8px 10px;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      gap: 4px;
+    }
+
+    .rule-row:last-child {
+      border-bottom: none;
+    }
+
+    .rule-header {
+      background: #F1F5F9;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .rule-exception {
+      background: #FEF9C3;
+    }
+
+    .sample-mistake-card {
+      background: var(--error-light);
+      border: 1px solid #FECACA;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .mistake-row {
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .mistake-wrong {
+      background: #FEE2E2;
+      color: var(--error);
+    }
+
+    .mistake-correct {
+      background: var(--secondary-light);
+      color: #065F46;
+    }
+
+    .mistake-tip {
+      font-size: 13px;
+      color: #B91C1C;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .sample-quiz-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 16px;
+      margin-bottom: 16px;
+    }
+
+    .sample-quiz-q {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .sample-choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .sample-choice {
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .sample-choice:hover:not(:disabled) {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .sample-choice:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .sample-choice.correct {
+      border-color: var(--secondary);
+      background: var(--secondary-light);
+      color: #065F46;
+    }
+
+    .sample-choice.incorrect {
+      border-color: var(--error);
+      background: var(--error-light);
+      color: var(--error);
+    }
+
+    .sample-feedback {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .sample-feedback.correct-fb {
+      background: var(--secondary-light);
+      color: #065F46;
+      border: 1px solid var(--secondary);
+    }
+
+    .sample-feedback.incorrect-fb {
+      background: var(--error-light);
+      color: var(--error);
+      border: 1px solid #FECACA;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .btn-sample-cta {
+      display: block;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+      transition: transform 0.15s;
+    }
+
+    .btn-sample-cta:active {
+      transform: scale(0.97);
+    }
+
+    /* ============================================
+       セクション7: 比較表
+       ============================================ */
+    .comparison {
+      background: var(--bg);
+      padding: 48px 0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .comp-table th,
+    .comp-table td {
+      padding: 12px 10px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comp-table th {
+      background: #F1F5F9;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .comp-table td:first-child,
+    .comp-table th:first-child {
+      text-align: left;
+      padding-left: 14px;
+    }
+
+    .our-col {
+      background: var(--primary-light);
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .our-price {
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    /* ============================================
+       セクション8: 保護者のかたへ
+       ============================================ */
+    .for-parents {
+      background: white;
+      padding: 48px 0;
+    }
+
+    .parent-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .parent-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 20px 16px;
+      border: 1px solid var(--border);
+    }
+
+    .parent-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .parent-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .parent-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       セクション9: 料金プラン
+       ============================================ */
+    .pricing {
+      background: var(--bg);
+      padding: 48px 0;
+    }
+
+    .pricing-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 18px;
+      padding: 22px 18px;
+      border: 2px solid var(--border);
+      position: relative;
+    }
+
+    .pricing-card-featured {
+      border-color: var(--primary);
+      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.18);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: white;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .plan-name {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .plan-price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .plan-amount {
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    .plan-unit {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .plan-tagline {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .plan-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 18px;
+    }
+
+    .plan-features li {
+      font-size: 14px;
+    }
+
+    .btn-plan {
+      display: block;
+      text-align: center;
+      padding: 13px;
+      border-radius: 11px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+
+    .btn-plan-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-plan-outline {
+      background: white;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-plan:active {
+      transform: scale(0.97);
+    }
+
+    /* ============================================
+       セクション10: FAQ
+       ============================================ */
+    .faq {
+      background: white;
+      padding: 48px 0;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .faq-question.open {
+      color: var(--primary);
+    }
+
+    .faq-icon {
+      font-size: 20px;
+      font-weight: 400;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+      color: var(--primary);
+    }
+
+    .faq-question.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .faq-answer.open {
+      display: block;
+    }
+
+    /* ============================================
+       セクション11: 最後のCTA
+       ============================================ */
+    .final-cta {
+      background: var(--bg);
+      padding: 48px 0;
+    }
+
+    .final-cta-card {
+      background: linear-gradient(160deg, var(--primary), #4F46E5);
+      border-radius: 20px;
+      padding: 36px 24px;
+      text-align: center;
+      color: white;
+    }
+
+    .final-eyebrow {
+      font-size: 13px;
+      opacity: 0.85;
+      margin-bottom: 12px;
+    }
+
+    .final-headline {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .final-subtext {
+      font-size: 15px;
+      opacity: 0.9;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .btn-final-cta {
+      display: block;
+      background: var(--accent);
+      color: white;
+      padding: 17px;
+      border-radius: 14px;
+      font-size: 19px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+      transition: transform 0.15s;
+    }
+
+    .btn-final-cta:active {
+      transform: scale(0.97);
+    }
+
+    .final-note {
+      font-size: 13px;
+      opacity: 0.75;
+      margin-top: 12px;
+    }
+
+    /* ============================================
+       フッター
+       ============================================ */
+    .site-footer {
+      background: #1E293B;
+      color: #94A3B8;
+      padding: 32px 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 17px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: #94A3B8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- ============================================
+       ヘッダー
+       ============================================ -->
+  <header id="site-header">
+    <div class="header-inner">
+      <div class="site-logo">📘 中学校英語サポート<span style="color:var(--accent);">＋</span></div>
+      <a href="app.html" class="btn-header-cta">無料で体験</a>
+    </div>
+  </header>
+
+  <!-- ============================================
+       セクション1: ファーストビュー（Hero）
+       ============================================ -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">元中学教員が作った英語学習サービス</p>
+      <h1 class="hero-headline">
+        英語でつまずいている<br>あなたのお子さんに、<br>
+        定期テストで<span class="hero-highlight">"点の取れる"</span>英語を。
+      </h1>
+      <p class="hero-subtext">
+        授業についていけない。先生に聞けない。<br>
+        そんな中学1年生のために、元教員が作った<br>
+        「わかる」より「点が取れる」英語学習サービスです。
+      </p>
+      <a href="app.html" class="btn-hero-cta">まず三単現を無料で体験 →</a>
+      <p class="hero-note">登録不要・クレジットカード不要</p>
+      <!-- 3つの実績カード -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-icon">📝</div>
+          <div class="stat-value">全45問</div>
+          <div class="stat-label">三単現のs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💬</div>
+          <div class="stat-value">質問し放題</div>
+          <div class="stat-label">平日24h以内回答</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📊</div>
+          <div class="stat-value">月980円〜</div>
+          <div class="stat-label">塾の1/10以下</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション2: ビフォーアフター
+       ============================================ -->
+  <section class="before-after">
+    <div class="container">
+      <p class="section-eyebrow">📈 実際の変化</p>
+      <h2 class="section-title">こんな変化が起きています</h2>
+      <div class="ba-cards">
+        <div class="ba-card ba-before">
+          <div class="ba-badge">Before</div>
+          <div class="ba-score">38点</div>
+          <p class="ba-quote">「英語のテストで38点…どこがわからないかもわからない」</p>
+        </div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-card ba-after">
+          <div class="ba-badge">After</div>
+          <div class="ba-score">72点</div>
+          <p class="ba-quote">「三単現のsは完璧になった！定期テストで72点取れた」</p>
+        </div>
+      </div>
+      <p class="ba-note">⚠️ 三単現のsは、中1の定期テストで<strong>8〜15点分</strong>出題される重要単元です。</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション3: こんな悩み、ありますか？
+       ============================================ -->
+  <section class="concerns">
+    <div class="container">
+      <p class="section-eyebrow">😟 保護者の声</p>
+      <h2 class="section-title">こんなお悩み、ありますか？</h2>
+      <div class="concern-list">
+        <div class="concern-item">❶「英語の授業についていけていないみたい…でもどこから教えればいいかわからない」</div>
+        <div class="concern-item">❷「定期テストの英語が40点台で、このまま中2になっても大丈夫か心配」</div>
+        <div class="concern-item">❸「先生に質問するのが恥ずかしいらしく、わからないまま放置してしまう」</div>
+        <div class="concern-item">❹「塾に通わせたいけど、月3万円はさすがに家計がきつい」</div>
+        <div class="concern-item">❺「市販の問題集を買ってみたけど続かなかった」</div>
+        <div class="concern-item">❻「スマホでゲームばかり。勉強に使えるアプリがあれば…」</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション4: 解決策
+       ============================================ -->
+  <section class="solution">
+    <div class="container">
+      <div class="solution-card">
+        <h2 class="solution-title">中学校英語サポート＋なら、<br>その悩みを解決できます</h2>
+        <div class="solution-items">
+          <div class="solution-item">
+            <span class="solution-num">1</span>
+            <p>「どこがわからないか」を<strong>単元別に整理</strong>してわかりやすく解説</p>
+          </div>
+          <div class="solution-item">
+            <span class="solution-num">2</span>
+            <p>テストに出るポイントだけを集中学習。<strong>「点が取れる」</strong>状態にする</p>
+          </div>
+          <div class="solution-item">
+            <span class="solution-num">3</span>
+            <p>わからなかったら<strong>24時間以内に先生に質問</strong>できる安心サポート</p>
+          </div>
+        </div>
+        <a href="app.html" class="btn-solution-cta">今すぐ無料で試してみる →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション5: 4つの特徴
+       ============================================ -->
+  <section class="features">
+    <div class="container">
+      <p class="section-eyebrow">✨ 特徴</p>
+      <h2 class="section-title">選ばれる4つの理由</h2>
+      <div class="feature-list">
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <div>
+            <h3 class="feature-title">テストに直結する解説</h3>
+            <p class="feature-desc">元中学教員が監修。「なぜそうなるか」より「テストでどう出るか」を優先した解説設計です。三単現のsは定期テストで8〜15点分出ます。studiesとstudysの違いを確実に理解させます。</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <div>
+            <h3 class="feature-title">気軽に質問できる</h3>
+            <p class="feature-desc">匿名で、気軽に。平日24時間以内に先生が回答します。授業で聞けなかったこと、何度聞いても恥ずかしくありません。</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <div>
+            <h3 class="feature-title">スマホで完結・続けやすい</h3>
+            <p class="feature-desc">アプリインストール不要。スマホのブラウザで今すぐ始められます。1回5〜15分の短いセッション設計で、忙しい中学生でも続けられます。</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💴</div>
+          <div>
+            <h3 class="feature-title">塾の1/10の価格</h3>
+            <p class="feature-desc">月額980円から。年払いなら月800円。塾が月3〜5万円かかるのに比べて圧倒的にコスパ良好。お試しプランなら月480円で効果を確かめられます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション6: 実際の教材サンプル
+       ============================================ -->
+  <section class="sample">
+    <div class="container">
+      <p class="section-eyebrow">📖 教材プレビュー</p>
+      <h2 class="section-title">実際の教材はこんな感じです</h2>
+      <p style="text-align:center;font-size:14px;color:var(--text-secondary);margin-bottom:20px;">三単現のs（中1・基礎）</p>
+
+      <!-- 解説カード -->
+      <div class="sample-explain-card">
+        <p class="sample-card-title">🎯 この単元のポイント</p>
+        <p class="sample-card-body">He / She / It が主語のとき、動詞の形が変わります。これを「三単現のs」と言います。</p>
+        <div class="sample-rule-table">
+          <div class="rule-row rule-header">
+            <span>動詞の語尾</span>
+            <span>変化</span>
+            <span>例</span>
+          </div>
+          <div class="rule-row">
+            <span>ほとんどの動詞</span>
+            <span>＋s</span>
+            <span>play→<strong>plays</strong></span>
+          </div>
+          <div class="rule-row">
+            <span>s/sh/ch/x/o終わり</span>
+            <span>＋es</span>
+            <span>watch→<strong>watches</strong></span>
+          </div>
+          <div class="rule-row">
+            <span>子音字＋y終わり</span>
+            <span>y→ies</span>
+            <span>study→<strong>studies</strong></span>
+          </div>
+          <div class="rule-row rule-exception">
+            <span>have（例外）</span>
+            <span>→has</span>
+            <span>have→<strong>has</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- よくあるミスカード -->
+      <div class="sample-mistake-card">
+        <p class="sample-card-title">⚠️ ここで5点差がつく！よくあるミス</p>
+        <div class="mistake-row mistake-wrong">❌ He <strong>studys</strong> English.</div>
+        <div class="mistake-row mistake-correct">✅ He <strong>studies</strong> English.</div>
+        <p class="mistake-tip">子音字+yで終わる動詞は「y → ies」に変えます！</p>
+      </div>
+
+      <!-- インタラクティブ問題 -->
+      <div class="sample-quiz-card">
+        <p class="sample-card-title">📝 実際に解いてみよう</p>
+        <p class="sample-quiz-q">次の動詞を正しい形にしなさい。<br><strong style="font-size:18px;">study (She)</strong></p>
+        <div class="sample-choices" id="sample-choices">
+          <button class="sample-choice" onclick="checkSampleAnswer(this, false)">studys</button>
+          <button class="sample-choice" onclick="checkSampleAnswer(this, true)">studies</button>
+          <button class="sample-choice" onclick="checkSampleAnswer(this, false)">study</button>
+          <button class="sample-choice" onclick="checkSampleAnswer(this, false)">is study</button>
+        </div>
+        <div class="sample-feedback hidden" id="sample-feedback"></div>
+      </div>
+
+      <a href="app.html" class="btn-sample-cta">全45問を解いてみる →</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション7: 比較表
+       ============================================ -->
+  <section class="comparison">
+    <div class="container">
+      <p class="section-eyebrow">🔍 比較</p>
+      <h2 class="section-title">他のサービスと比べてみました</h2>
+      <div class="table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>比較項目</th>
+              <th class="our-col">当サービス</th>
+              <th>映像授業</th>
+              <th>塾</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>テスト直結の演習</td>
+              <td class="our-col">✅</td>
+              <td>△</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>質問できる</td>
+              <td class="our-col">✅</td>
+              <td>❌</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>月額料金</td>
+              <td class="our-col our-price">980円〜</td>
+              <td>2,178円〜</td>
+              <td>15,000円〜</td>
+            </tr>
+            <tr>
+              <td>保護者が進捗確認</td>
+              <td class="our-col">✅</td>
+              <td>△</td>
+              <td>△</td>
+            </tr>
+            <tr>
+              <td>単元別演習</td>
+              <td class="our-col">✅</td>
+              <td>✅</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td>解説の特徴</td>
+              <td class="our-col">テスト特化</td>
+              <td>幅広い</td>
+              <td>対面</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション8: 保護者のかたへ
+       ============================================ -->
+  <section class="for-parents">
+    <div class="container">
+      <p class="section-eyebrow">👨‍👩‍👧 保護者のかたへ</p>
+      <h2 class="section-title">保護者の方が安心できる<br>3つの理由</h2>
+      <div class="parent-cards">
+        <div class="parent-card">
+          <div class="parent-icon">📊</div>
+          <h3>学習状況をいつでも確認できます</h3>
+          <p>保護者専用画面で「今日何問解いたか」「正答率は何%か」をいつでも確認。塾のように月1回の面談を待つ必要はありません。</p>
+        </div>
+        <div class="parent-card">
+          <div class="parent-icon">🔒</div>
+          <h3>安全設計・個人情報最小限</h3>
+          <p>お子様の名前・学校名・住所は一切収集しません。広告も表示しません。安心してお子様に使わせていただけます。</p>
+        </div>
+        <div class="parent-card">
+          <div class="parent-icon">💳</div>
+          <h3>途中解約OK・縛りなし</h3>
+          <p>月額制のため、いつでも解約できます。1ヶ月分だけ試すことも可能。まず1ヶ月試してみて、効果を確かめてください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション9: 料金プラン
+       ============================================ -->
+  <section class="pricing">
+    <div class="container">
+      <p class="section-eyebrow">💴 料金</p>
+      <h2 class="section-title">シンプルな料金プラン</h2>
+      <div class="pricing-cards">
+
+        <!-- お試し -->
+        <div class="pricing-card">
+          <p class="plan-name">お試しプラン</p>
+          <div class="plan-price">
+            <span class="plan-amount">480</span>
+            <span class="plan-unit">円/月</span>
+          </div>
+          <p class="plan-tagline">1単元で効果を確認したい方に</p>
+          <ul class="plan-features">
+            <li>✅ 三単現のs（全45問）</li>
+            <li>✅ 質問：5件/月</li>
+            <li>❌ 保護者確認なし</li>
+          </ul>
+          <a href="app.html" class="btn-plan btn-plan-outline">このプランで始める</a>
+        </div>
+
+        <!-- スタンダード（おすすめ） -->
+        <div class="pricing-card pricing-card-featured">
+          <div class="plan-badge">⭐ 人気No.1</div>
+          <p class="plan-name">スタンダード</p>
+          <div class="plan-price">
+            <span class="plan-amount">980</span>
+            <span class="plan-unit">円/月</span>
+          </div>
+          <p class="plan-tagline">本格的に取り組みたい方に</p>
+          <ul class="plan-features">
+            <li>✅ 中1全単元（随時追加）</li>
+            <li>✅ 質問：無制限</li>
+            <li>✅ 保護者確認あり</li>
+          </ul>
+          <a href="app.html" class="btn-plan btn-plan-primary">このプランで始める</a>
+        </div>
+
+        <!-- ファミリー -->
+        <div class="pricing-card">
+          <p class="plan-name">ファミリープラン</p>
+          <div class="plan-price">
+            <span class="plan-amount">1,480</span>
+            <span class="plan-unit">円/月</span>
+          </div>
+          <p class="plan-tagline">兄弟・姉妹で使いたい方に</p>
+          <ul class="plan-features">
+            <li>✅ お子様2名まで</li>
+            <li>✅ スタンダードの全機能</li>
+            <li>✅ 個別進捗レポート</li>
+          </ul>
+          <a href="app.html" class="btn-plan btn-plan-outline">このプランで始める</a>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:13px;color:var(--text-secondary);margin-top:16px;">クレジットカード不要で今すぐ体験できます</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション10: FAQ
+       ============================================ -->
+  <section class="faq">
+    <div class="container">
+      <p class="section-eyebrow">❓ よくある質問</p>
+      <h2 class="section-title">よくある質問</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>本当に月額980円だけですか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-answer">はい、スタンダードプランは月額980円（税込）のみです。入会金・テキスト代など追加費用は一切かかりません。クレジットカード決済のため、お試しプランなら今すぐ無料で体験できます。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>試してみて合わなかったらどうなりますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-answer">いつでも解約できます。解約は画面のメニューから1分でできます。違約金・解約金は一切かかりません。月額制なので、翌月以降の請求は発生しません。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>スマートフォンだけで使えますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-answer">はい、スマートフォンのブラウザだけで完結します。アプリのインストールは不要です。PCやタブレットでも使えますが、スマホに最適化して設計されています。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>子どもが一人で使えますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-answer">はい、お子様が一人で使えるよう設計されています。解説は中学生向けにわかりやすく書かれており、わからなかったら質問機能でサポートが受けられます。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>質問の返信はどのくらいかかりますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-answer">平日は原則24時間以内に回答します（土日祝は翌平日中）。よくある質問はFAQとして自動返答されるため、即時に解決できる場合もあります。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>今後どんな単元が追加される予定ですか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-answer">現在、be動詞・一般動詞が利用できます。今後、現在進行形・過去形・can・疑問文・否定文など中1英語の全単元を順次追加予定です。スタンダードプランに登録すると追加単元もすべて利用できます。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>学校の定期テストにどれくらい役立ちますか？</span>
+            <span class="faq-icon">＋</span>
+          </button>
+          <div class="faq-answer">非常に役立ちます。本サービスは「定期テストで点が取れること」を最優先に設計されています。三単現のsを例に取ると、この単元は中1の定期テストで8〜15点分出題されます。本サービスで学ぶことで、この部分の得点を確実に取れるようになることを目指しています。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       セクション11: 最後のCTA
+       ============================================ -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-card">
+        <p class="final-eyebrow">🚀 今すぐスタート</p>
+        <h2 class="final-headline">まず、三単現のsだけ<br>試してみてください。</h2>
+        <p class="final-subtext">登録不要・カード不要。<br>今すぐ45問に挑戦できます。</p>
+        <a href="app.html" class="btn-final-cta">無料で体験する →</a>
+        <p class="final-note">⏱ 60秒以内に学習をはじめられます</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       フッター
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logo">📘 中学校英語サポート＋</div>
+      <p class="footer-copy">© 2026 中学校英語サポート＋</p>
+      <div class="footer-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">お問い合わせ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ============================================
+    // ヘッダースクロール制御
+    // ============================================
+    window.addEventListener('scroll', () => {
+      const h = document.getElementById('site-header');
+      h.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // ============================================
+    // FAQアコーディオン
+    // ============================================
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      // すべてのFAQを閉じる
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.classList.remove('open');
+        q.nextElementSibling.classList.remove('open');
+      });
+      // クリックされたFAQをトグル
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+
+    // ============================================
+    // サンプル問題の正解判定
+    // ============================================
+    function checkSampleAnswer(btn, isCorrect) {
+      const choices = document.getElementById('sample-choices');
+      // 既に回答済みならリターン
+      if (choices.querySelector('.correct, .incorrect')) return;
+      const feedback = document.getElementById('sample-feedback');
+      // すべてのボタンを無効化
+      choices.querySelectorAll('.sample-choice').forEach(b => b.disabled = true);
+      if (isCorrect) {
+        btn.classList.add('correct');
+        feedback.textContent = '✅ 正解！ study → studies（子音字+y → ies）テストでよく出ます！';
+        feedback.className = 'sample-feedback correct-fb';
+      } else {
+        btn.classList.add('incorrect');
+        // 正解ボタンをハイライト
+        choices.querySelectorAll('.sample-choice').forEach(b => {
+          if (b.textContent === 'studies') b.classList.add('correct');
+        });
+        feedback.textContent = '❌ 残念！ 正解は studies です。study は子音字+yで終わるので y→ies にします。';
+        feedback.className = 'sample-feedback incorrect-fb';
+      }
+      feedback.classList.remove('hidden');
+    }
+
+    // ============================================
+    // スムーズスクロール（アンカーリンク用）
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
